@@ -6,10 +6,10 @@
 Show results after calling the function \code{xparse}.
 }
 \usage{
-  xshow(cols="",sort="a")
+  xshow(e=NULL,sort="a")
 }
 \arguments{
-  \item{cols}{a column or a list of columns that you want display, default cols = "" => display all columns}
+  \item{e}{an entity or a list of entities that you want display, default e = NULL => display all columns}
   \item{sort}{type sort of data, default sort = "a" => sorted by alphabet, sort = "f" => sorted by frequency.}
 }
 \details{
@@ -23,11 +23,11 @@ Show results after calling the function \code{xparse}.
 \examples{
   xfile() #show all names of files in corpus
   xshow() #all columns
-  xshow(cols="p",sort="a") #show result of entity "p", sorted by alphabet
-  xshow(cols="p",sort="f")
-  xshow(cols=c("p","m"))
+  xshow(e="p",sort="a") #show result of entity "p", sorted by alphabet
+  xshow(e="p",sort="f")
+  xshow(e=c("p","m"))
 }
-\author{Tien Phan}
+\author{Tien T. Phan}
 \seealso{
   \code{\link{xparse}}  call the main function of module extraction written by Perl\cr
   \code{\link{xconfig}} system configuration\cr

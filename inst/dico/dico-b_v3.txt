@@ -69,7 +69,7 @@ Cécidomyie rouge du vulpin:L:Cécidomyie rouge du vulpin:D. agropyroni:Dasineur
 Cémiostome du pommier:L:Cemiostome:Cemiostomes:Cémiostome:Cémiostomes:Cémiostome du pommier:L. scitella:Leucoptera scitella:C. malifoliella:Cemiostama malifoliella:Cemiostome du pommier:Cemiostomes du pommier:Cémiostomes du pommier:
 Cératite:L:Cératite:C. capitata:Ceratitis capitata:Mouche mediterraneenne des fruits:Mouches mediterraneennes des fruits:Mouches méditerranéennes des fruits:Ceratite:Ceratites:Cératites:
 Céroplaste du figuier:L:Ceroplaste:Ceroplastes:Céroplaste:Céroplastes:Céroplaste du figuier:C. rusci:Ceroplastes rusci:Ceroplaste du figuier:Ceroplastes du figuier:Céroplastes du figuier:
-Charançon:N:Charançon:Charançons:Charancon:Charancons:Charançon de la tige du chou:Charançon de la tige du colza:Charançon des siliques de colza:Charançon gallicole du chou:charançon du bourgeon terminal:Charançon des siliques:Charancon des siliques:Charançons des siliques:Charancons des siliques:
+Charançon:N:Charançon:Charançons:Charancon:Charancons:Charançon de la tige du chou:Charançon de la tige du colza:Charançon des siliques de colza:Charançon gallicole du chou:charançon du bourgeon terminal:
 Charançon de la tige du chou:L:Charançon de la tige du chou:C. quadridens:Ceuthorhynchus quadridens:Charancon de la tige du chou:Charancons de la tige du chou:Charançons de la tige du chou:
 Charançon de la tige du colza:L:Charançon de la tige du colza:C. napi:Ceuthorhynchus napi:Charancon de la tige du colza:Charancons de la tige du colza:Charançons de la tige du colza:
 Charançon des siliques de colza:L:Charançon des siliques de colza:C. assimilis:Ceuthorhynchus assimilis:Charancon des siliques de colza:Charancons des siliques de colza:Charançons des siliques de colza:Charançon des siliques:Charancon des siliques:Charançons des siliques:Charancons des siliques:
@@ -98,7 +98,7 @@ Corbeau freux:L:Corbeau:Corbeaux:Corbeau freux:C. frugilegus:Corvus frugilegus:C
 Corneille noire:L:Corneille:Corneilles:Corneille noire:Corneille noire:Corneille noire:C. corone:Corvus corone:Corneilles noires:
 Cossus gâte-bois:L:Cossus gâte-bois:Cossus gâte-bois:Cossus gâte-bois:C. cossus:Cossus cossus:T. cossus:Trypanus cossus:
 Courtilière:L:Courtilière:G. gryllotalpa:Gryllotalpa gryllotalpa:Taupe-grillon:Taupes-grillons:Courtiliere:Courtilieres:Courtilières:
-Criocère:N:Criocère:Criocères:Criocere:Crioceres:Criocère à douze points:Criocère de l'asperge:Criocère des céréales:Petit Criocère des céréales:
+Criocère:N:Criocère:Criocères:Criocere:Crioceres:Criocère à douze points:Criocère de l'asperge:Criocère des céréales:Petit Criocère des céréales:léma:lémas:Lémas:lema:lemas:
 Criocère à douze points:L:Criocère à douze points:C. duodecimpunctata:Crioceris duodecimpunctata:Criocere a douze points:Crioceres a douze points:Criocères à douze points:
 Criocère de l'asperge:L:Criocère de l'asperge:C. asparagi:Crioceris asparagi:Criocere de l'asperge:Crioceres de l'asperge:Criocères de l'asperge:
 Criocère des céréales:L:Criocère des céréales:O. melanopa:Oulema melanopa:L. melanopa:Lema melanopa:Criocere des ceréales:Crioceres des ceréales:Criocères des céréales:
@@ -109,7 +109,7 @@ Faisan:L:Faisan:P. colchicus:Phasianus colchicus:Faisans:
 Frelon:L:Frelon:V. crabro:Vespa crabro:Frelons:Guepe frelon:Guepes frelon:Guêpes frelon:Guichard:
 Grand Puceron du noisetier:L:Grand Puceron du noisetier:C. avellanae:Corylobium avellanae:Grands Pucerons du noisetier:
 Gros Puceron des racines de chicorée:L:Gros Puceron des racines de chicorée:P. radicis:Protrama radicis:Gros Puceron des racines de chicoree:Gros Pucerons des racines de chicoree:Gros Pucerons des racines de chicorée:
-Grosse Altise du colza:L:altise d’hiver:Grosse Altise:Grosse Altises:Grosse Altise du colza:P. chrysocephala:P. chrysocephala:Grosses Altises du colza:Grosse Altise:Grosses Altises:
+Grosse Altise du colza:L:altise d'hiver:Grosse Altise:Grosse Altises:Grosse Altise du colza:P. chrysocephala:P. chrysocephala:Grosses Altises du colza:Grosse Altise:Grosses Altises:
 Guêpe:N:Guêpe:Guêpes:Guepes:Guepe:Guêpe germanique:Guêpe frelon:
 Guêpe germanique:L:Guêpe germanique:V. germanica:Vespula germanica:V. germanica:Vespa germanica:Guepe germanique:Guepes germaniques:Guêpes germanique:
 Hanneton:N:Hanneton:Hannetons:Hanneton commun:Hanneton des pins:
@@ -279,7 +279,7 @@ Puceron noir des citrus:L:Puceron noir des citrus:T. aurantii:Toxoptera aurantii
 Puceron noir du cerisier:L:Puceron noir du cerisier:M. cerasi:Myzus cerasi:M. pruni-avium:Myzus pruni-avium:A. prunicola:Aphis prunicola:Pucerons noirs du cerisier:
 Puceron noir du pêcher:L:Puceron noir du pêcher:B. persicae:Brachycaudus persicae:B. persicaecola:Brachycaudus persicaecola:Puceron noir du pecher:Pucerons noirs du pecher:Pucerons noirs du pêcher:
 Puceron strié de la digitale et de la pomme de terre:L:Puceron strié de la digitale et de la pomme de terre:A. solani:Aulacorthum solani:D. vincae:Dysaulacorthum vincae:A. pseudosolani:Aulacorthum pseudosolani:Puceron strie de la digitale et de la pomme de terre:Pucerons stries de la digitale et de la pomme de terre:Pucerons striés de la digitale et de la pomme de terre:
-Puceron vert:N:Puceron vert:Pucerons verts:Puceron vert de l'artichaut:Puceron vert des citrus, Puceron des spirées:Puceron vert du fraisier:Puceron vert du groseillier à grappes et du cassissier:Puceron vert du groseillier épineux:Puceron vert du maïs:Puceron vert du noisetier:Puceron vert du pêcher:Puceron vert du prunier:Puceron vert et rose de la pomme de terre:Puceron vert migrant du pommier:Puceron vert non migrant du pommier:Puceron vert ou rose du pois:
+Puceron vert:N:Puceron vert:Pucerons verts:Pucerons vert:Puceron vert de l'artichaut:Puceron vert des citrus, Puceron des spirées:Puceron vert du fraisier:Puceron vert du groseillier à grappes et du cassissier:Puceron vert du groseillier épineux:Puceron vert du maïs:Puceron vert du noisetier:Puceron vert du pêcher:Puceron vert du prunier:Puceron vert et rose de la pomme de terre:Puceron vert migrant du pommier:Puceron vert non migrant du pommier:Puceron vert ou rose du pois:
 Puceron vert de l'artichaut:L:Puceron vert de l'artichaut:C. horni:Capitophorus horni:Pucerons verts de l'artichaut:
 Puceron vert des citrus:L:Puceron vert des citrus, Puceron des spirées:A. spiraecola:Aphis spiraecola:A. citricola:Aphis citricola:Puceron des spirees:Puceron des spirées:Pucerons des spirées:Pucerons des spirees:Pucerons verts des citrus:
 Puceron vert du fraisier:L:Puceron vert du fraisier:A. forbesi:Aphis forbesi:C. forbesi:Cerosipha forbesi:Pucerons verts du fraisier:
@@ -339,7 +339,7 @@ Tétranyque:N:Tétranyque:Tétranyques:Tetranyque:Tetranyques:Tétranyque de la 
 Tétranyque de la vigne et du charme:L:Tétranyque de la vigne et du charme:E. carpini:Eotetranychus carpini:E. vitis:Eotetranychus vitis:Tetranyque de la vigne et du charme:Tetranyques de la vigne et du charme:Tétranyques de la vigne et du charme:
 Tétranyque de McDaniel:L:Tétranyque de McDaniel:T. mcdanieli:Tetranychus mcdanieli:Tetranyque de McDaniel:Tetranyques de McDaniel:Tétranyques de McDaniel:
 Tétranyque tisserand:L:Tétranyque tisserand:T. urticae:Tetranychus urticae:T. telarius:Tetranychus telarius:T. altheae:Tetranychus altheae:Tetranyque tisserand:Tetranyques tisserands:Tétranyques tisserands:
-Thrips:N:Thrips:Thrips californien:Thrips de l'olivier:Thrips des céréales:Thrips des céréales:Thrips du blé:Thrips du pêcher:Thrips du pois:Thrips du tabac et de l'oignon:
+Thrips:N:Thrips:Thrips californien:Thrips de l'olivier:Thrips des céréales:Thrips des céréales:Thrips du blé:Thrips du pêcher:Thrips du pois:Thrips du tabac et de l'oignon:Thrips sur oignons:
 Thrips californien:L:Thrips californien:F. occidentalis:Frankliniella occidentalis:Thrips californiens:
 Thrips de l'olivier:L:Thrips de l'olivier:L. oleae:Liothrips oleae:T. oleae:Thrips oleae:P. oleae:Phloeothrips oleae:
 Thrips des céréales:L:Thrips des céréales:L. denticornis:Limothrips denticornis:L. cerealium:Limothrips cerealium:Thrips des cereales:Thrips des céréales:
@@ -347,6 +347,7 @@ Thrips du blé:L:Thrips du blé:H. tritici:Haplothrips tritici:Thrips du ble:
 Thrips du pêcher:L:Thrips du pêcher:T. meridionalis:Thrips meridionalis:Thrips du pecher:
 Thrips du pois:L:Thrips du pois:F. robusta:Frankliniella robusta:K. robustus:Kakothrips robustus:K. pisivorus:Kakothrips pisivorus:
 Thrips du tabac et de l'oignon:L:Thrips du tabac et de l'oignon:T. tabaci:Thrips tabaci:
+Thrips sur oignons:L:Thrips sur oignon:Thrips sur oignons:
 Tigre de l'amandier:L:Tigre de l'amandier:M. unicostata:Monostira unicostata:Tigres de l'amandier:
 Tigre du poirier:L:Tigre du poirier:S. piri:Stephanitis piri:Tigres du poirier:
 Tipule des prairies:L:Tipule:Tipules:Tipule des prairies:T. paludosa:Tipula paludosa:Tipules des prairies:
@@ -362,7 +363,7 @@ Tordeuse orientale du pêcher:L:Tordeuse orientale du pêcher:C. molesta:Cydia m
 Tordeuse pandemis:L:Tordeuse pandemis:P. heparana:Pandemis heparana:Tordeuses pandemis:
 Tordeuse rouge des bourgeons:L:Tordeuse rouge des bourgeons:S. ocellana:Spilonota ocellana:E. ocellana:Eucosma ocellana:Tordeuses rouges des bourgeons:
 Tordeuse verte des bourgeons:L:Tordeuse verte des bourgeons:H. nubiferana:Hedya nubiferana:H. dimidioalba:Hedya dimidioalba:Tordeuses vertes des bourgeons:
-ver:N:ver:vers:Ver des framboises:Ver du cotonnier:
+ver:N:ver:Ver des framboises:Ver du cotonnier:
 Ver des framboises:L:Ver des framboises:B. urbanus:Byturus urbanus:B. tomentosus:Byturus tomentosus:Vers des framboises:
 Ver du cotonnier:L:Ver du cotonnier:S. littoralis:Spodoptera littoralis:S. litura:Spodoptera litura:P. litura:Prodenia litura:Vers du cotonnier:
 Verdier:L:Verdier:Verdiers:C. chloris:Carduelis chloris:C. chloris:Chloris chloris:

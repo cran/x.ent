@@ -72,8 +72,14 @@
     \item{blacklist}{a path of file that contains the list of words for each entity that we do not want to appear in results}
     }
 }
+\note{
+  This package performs well with UTF-8 encoding.
+  For configuring UTF-8 encoding on your system:
+  In the windows of R, you can type:\cr
+  \code{options(encoding="UTF-8")}
+}
 \author{
-  Tien Phan
+  Tien T. Phan
 }
 \examples{
   xconfig()

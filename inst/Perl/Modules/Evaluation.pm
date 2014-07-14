@@ -43,10 +43,16 @@ sub LoadFile
 			if(@phases eq 2)
 			{
 				my @syns = ();
+				my %temp = ();
 				@tokens = split(/[\:]/,$phases[1]);
 				for(my $i=1; $i<@tokens - 1; $i++)
 				{
-					push(@syns,lc($tokens[$i]));#push(@syns,lc($tokens[$i]));
+					#push(@syns,lc($tokens[$i]));#push(@syns,lc($tokens[$i]));
+					$temp{lc($tokens[$i])}++;
+				}
+				foreach my $key (keys %temp)
+				{
+					push(@syns,$key)
 				}
 				$hash{lc($phases[0])} = \@syns;	
 			}	
@@ -101,6 +107,7 @@ sub EvaluationGlobal
 	my %countR_Y = ();#result
 	my %countR_X_Y = ();#réunion entre la evaluation et le résultat
 	my (@data_X,@data_Y);
+	my $output = "Entity;Précision;Rappel;X_Y;X;Y;F-mesure\n";
 	while(my ($key,$value)=each(%data_result))
 	{
 		@data_Y = @{$value};
@@ -174,20 +181,26 @@ sub EvaluationGlobal
 		if(exists $countX_Y{$key})
 		{
 			$count_global_X_Y += $countX_Y{$key};
-			my $presition = $countX_Y{$key}*100/$countY{$key};
+			my $precision = $countX_Y{$key}*100/$countY{$key};
 			my $recall = $countX_Y{$key}*100/$countX{$key};
-			print "Entity $key: P = $presition\t-\tR = $recall \tCount: X_Y= $countX_Y{$key} -\tX= $countX{$key} -\tY = $countY{$key}\n";
+			my $f_mesure = (2*$recall*$precision)/($recall+$precision);
+			print "Entity $key: P = $precision\t-\tR = $recall \tCount: X_Y= $countX_Y{$key} -\tX= $countX{$key} -\tY = $countY{$key} -\tF-mesure = $f_mesure\n";
+			$output .= "$key;$precision;$recall;$countX_Y{$key};$countX{$key};$countY{$key};$f_mesure\n";
 		}
 	}
-	my $presition = 0;
+	my $precision = 0;
 	my $recall = 0;
+	my $f_mesure = 0;
 	if(($count_global_Y > 0) and ($count_global_X > 0))
 	{
-		$presition = $count_global_X_Y*100/$count_global_Y;
-		$recall = $count_global_X_Y*100/$count_global_X ;	
+		$precision = $count_global_X_Y*100/$count_global_Y;
+		$recall = $count_global_X_Y*100/$count_global_X ;
+		$f_mesure = (2*$recall*$precision)/($recall+$precision);	
 	}
-	print "Total: P = $presition\t-\tR = $recall \tCount: X_Y= $count_global_X_Y -\tX= $count_global_X -\tY = $count_global_Y\n";
+	print "Total: P = $precision\t-\tR = $recall \tCount: X_Y= $count_global_X_Y -\tX= $count_global_X -\tY = $count_global_Y -\tF-mesure = $f_mesure\n";
+	$output .= "Total;$precision;$recall;$count_global_X_Y;$count_global_X;$count_global_Y;$f_mesure\n";
 	print "----------------------------------------------------------------------------------------------------------------------\n";
+	$output .= "Relation\n";
 	#précision et rappel relation
 	my $count_relation_X = 0;#X est eval
 	my $count_relation_Y = 0;#Y est result
@@ -205,19 +218,28 @@ sub EvaluationGlobal
 		if(exists $countR_X_Y{$key})
 		{
 			$count_relation_X_Y += $countR_X_Y{$key};
-			my $presition = $countR_X_Y{$key}*100/$countR_Y{$key};
+			my $precision = $countR_X_Y{$key}*100/$countR_Y{$key};
 			my $recall = $countR_X_Y{$key}*100/$countR_X{$key};
-			print "Relation $key: P = $presition\t-\tR = $recall \tCount: X_Y= $countR_X_Y{$key} -\tX= $countR_X{$key} -\tY = $countR_Y{$key}\n";
+			my $f_mesure = (2*$recall*$precision)/($recall+$precision);
+			print "Relation $key: P = $precision\t-\tR = $recall \tCount: X_Y= $countR_X_Y{$key} -\tX= $countR_X{$key} -\tY = $countR_Y{$key} -\tF-mesure = $f_mesure\n";
+			$output .= "$key;$precision;$recall;$countR_X_Y{$key};$countR_X{$key};$countR_Y{$key};$f_mesure\n";
 		}
 	}
-	$presition = 0;
+	$precision = 0;
 	$recall = 0;
+	$f_mesure = 0;
 	if(($count_relation_X > 0) and ($count_relation_Y > 0))
 	{
-		$presition = $count_relation_X_Y*100/$count_relation_Y;
-		$recall = $count_relation_X_Y*100/$count_relation_X ;	
+		$precision = $count_relation_X_Y*100/$count_relation_Y;
+		$recall = $count_relation_X_Y*100/$count_relation_X ;
+		if(($recall+$precision) ne 0)
+		{
+			$f_mesure = (2*$recall*$precision)/($recall+$precision);
+		}	
 	}
-	print "Total of relation: P = $presition\t-\tR = $recall \tCount: X_Y= $count_relation_X_Y -\tX= $count_relation_X -\tY = $count_relation_Y\n";
+	print "Total of relation: P = $precision\t-\tR = $recall \tCount: X_Y= $count_relation_X_Y -\tX= $count_relation_X -\tY = $count_relation_Y -\tF-mesure = $f_mesure\n";
+	$output .= "Total of relation;$precision;$recall;$count_relation_X_Y;$count_relation_X;$count_relation_Y;$f_mesure\n";
+	#Modules::Utils::SaveFile("./data/out/result.csv",$output);
 }
 sub EvaluationLocal
 {

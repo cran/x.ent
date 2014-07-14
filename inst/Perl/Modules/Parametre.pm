@@ -10,6 +10,5 @@ use Carp; #helps with debugging
 #types de dictionnary, constant
 our $TROUVE_DIC = "DIC";
 our $TROUVE_CORPUS = "COR";
-our $FILE_STOP_WORD = "";
 #=================================================
 1;

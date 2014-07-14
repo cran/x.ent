@@ -22,7 +22,7 @@ Anthracnose sur Pois:L:Anthracnose sur Pois:A. pisi:Ascochyta pisi:P. medicagini
 Apple mosaic virus:L:Apple mosaic virus:ApMV:
 Artichoke mottled crinkle virus:L:Artichoke mottled crinkle virus:AMCV:
 Aschochytose de la Luzerne:L:Aschochytose de la Luzerne:P. medicaginis:Phoma medicaginis:A. pinodella:Ascochyta pinodella:Aschochytoses de la Luzerne:
-Bactériose:N:Bacteriose:Bacterioses:Bactériose:Bactérioses:Bactériose à Pseudomonas du Soja:Bactériose à Pseudomonas sur Laitue:Bactériose à Xanthomonas du Fraisier:Bactériose à Xanthomonas du Noisetier:Bactériose à Xanthomonas du Noyer:
+Bactériose:N:Bacteriose:Bacterioses:Bactérienne:Bactériennes:Bactériose:Bactérioses:Bactériose à Pseudomonas du Soja:Bactériose à Pseudomonas sur Laitue:Bactériose à Xanthomonas du Fraisier:Bactériose à Xanthomonas du Noisetier:Bactériose à Xanthomonas du Noyer:
 Bactériose à Pseudomonas du Soja:L:Bactériose à Pseudomonas du Soja:P. syringae:Pseudomonas syringae:Bacteriose a Pseudomonas du Soja:Bacterioses a Pseudomonas du Soja:Bactérioses à Pseudomonas du Soja:
 Bactériose à Pseudomonas sur Laitue:L:Bactériose à Pseudomonas sur Laitue:P. cichorii:Pseudomonas cichorii:Bacteriose a Pseudomonas sur Laitue:Bacterioses a Pseudomonas sur Laitue:Bactérioses à Pseudomonas sur Laitue:
 Bactériose à Xanthomonas du Fraisier:L:Bactériose à Xanthomonas du Fraisier:X. fragariae:Xanthomonas fragariae:Bacteriose a Xanthomonas du Fraisier:Bactérioses a Xanthomonas du Fraisier:Bactérioses à Xanthomonas du Fraisier:
@@ -123,14 +123,14 @@ Mildiou de l'Oignon:L:Mildiou de l'Oignon:P. destructor:Peronospora destructor:P
 Mildiou de l'Oignon sur Ail:L:Mildiou de l'Oignon sur Ail:P. destructor:Peronospora destructor:P. schleideni:Peronospora schleideni:Mildioux de l'Oignon sur Ail:Mildious de l'Oignon sur Ail:
 Mildiou de la Laitue:L:Mildiou de la Laitue:B. lactucae:Bremia lactucae:Mildioux de la Laitue:Mildious de la Laitue:
 Mildiou de la Tomate:L:Mildiou de la Tomate:P. infestans:Phytophthora infestans:Mildioux de la Tomate:Mildious de la Tomate:
-Mildiou de la Vigne:L:Mildiou de la Vigne:P. viticola:Plasmopara viticola:Mildioux de la Vigne:Mildious de la Vigne:
+Mildiou de la Vigne:L:Mildiou de la Vigne:P. viticola:Plasmopara viticola:Mildioux de la Vigne:Mildious de la Vigne:Mildiou de la Grappe:Mildious de la Grappe:Mildioux de la Grappe:
 Mildiou des Curcubitacées:L:Mildiou des Curcubitacées:P. cubensis:Pseudoperonospora cubensis:Mildioux des Curcubitacees:Mildious des Curcubitacees:Mildioux des Curcubitacées:Mildious des Curcubitacées:Mildiou des Curcubitacees:
 Mildiou du Houblon:L:Mildiou du Houblon:P. humuli:Pseudoperonospora humuli:Mildioux du Houblon:Mildious du Houblon:
 Mildiou du Pois:L:Mildiou du Pois:P. viciae:Peronospora viciae:Mildioux du Pois:Mildious du Pois:
 Mildiou du Tournesol:L:Mildiou du Tournesol:P. helianthi:Plasmopara helianthi:P. halstedii:Plasmopara halstedii:Mildioux du Tournesol:Mildious du Tournesol:
 Mildiou sur Artichaut:L:Mildiou sur Artichaut:B. lactucae:Bremia lactucae:Mildious sur Artichaut:Mildioux sur Artichaut:
 Mildiou sur Poivron:L:Mildiou sur Poivron:P. capsici:Phytophthora capsici:Mildiou sur Poivron:Mildiou sur Poivron:
-Mildiou sur Pomme de terre:L:Mildiou sur Pomme de terre:P. infestans:Phytophthora infestans:Mildioux sur Pomme de terre:Mildious sur Pomme de terre:
+Mildiou sur Pomme de terre:L:Mildiou sur Pomme de terre:P. infestans:Phytophthora infestans:Mildioux sur Pomme de terre:Mildious sur Pomme de terre:Mildiou de la Pomme de terre:
 Moniliose:N:Moniliose:Monilioses:Moniliose des Arbres fruitiers:Moniliose sur Abricotier:Moniliose sur Cerisier:
 Moniliose des Arbres fruitiers:L:Moniliose des Arbres fruitiers:M. laxa:Monilinia laxa:S. laxa:Sclerotinia laxa:Monilioses des Arbres fruitiers:
 Moniliose sur Abricotier:L:Moniliose sur Abricotier:M. laxa:Monilinia laxa:S. laxa:Sclerotinia laxa:Monilioses sur Abricotier:
@@ -258,3 +258,24 @@ Phoma du tournesol:L:Phoma du tournesol:Phoma du tournesol:Phoma macdonaldii:P. 
 Wheat dwarf virus:L:Wheat dwarf virus:WDV:wheat dwarf:virus des pieds chétifs:virus des pieds chetifs:
 pourriture racinaire du pois:L:pourriture racinaire du pois:pourritures racinaire du pois:aphanomyces euteiches:a. euteiches:pourriture du pois:pourritures du pois:
 rhizoctone violet:N:rhizoctone violet:rhizoctones violet:Rhizoctone violet sur Asperge:Rhizoctone violet sur Betterave:
+jambe noire:L:jambe noire:jambes noires:pourriture molle:pourriture bactérienne:pourriture lenticellaire:
+Erwinia:N:Erwinia:Erwinias:Erwinia amylovora:Erwinia aphidicola:Erwinia billingiae:Erwinia carotovora:Erwinia cypripedii:Erwinia herbicola:Erwinia mallotivora:Erwinia milletiae:Erwinia papaya:Erwinia persicina:Erwinia psidii: Erwinia pyrifoliae:Erwinia rhapontici:Erwinia toletana:Erwinia tracheiphila:Erwinia uredovora:Erwinia chrysanthemi:
+Erwinia amylovora:L:Erwinia amylovora:Erwinias amylovoras:E. amylovora: Feu bactérien: brûlure bactérienne:
+Erwinia aphidicola:L:Erwinia aphidicola:Erwinias aphidicolas:E. aphidicola: 
+Erwinia billingiae:L:Erwinia billingiae:Erwinia billingiaes:E. billingiae:
+Erwinia carotovora:L:Erwinia carotovora:E. carotovora:Erwinias carotovoras: Erwinia carotovora subsp. atroseptica:Erwinia carotovora susp. carotovora:
+Erwinia cypripedii:L:Erwinia cypripedii:Erwinias cypripediis:E. cypripedii:
+Erwinia herbicola:L:Erwinia herbicola:Erwinias herbicolas:E. herbicola:
+Erwinia mallotivora:L:Erwinia mallotivora:Erwinias mallotivoras:E. mallotivora:
+Erwinia milletiae:L:Erwinia milletiae:Erwinias milletiaes:E. milletiae:
+Erwinia milletiae:L:Erwinia milletiae:Erwinias milletiaes:E. milletiaes:
+Erwinia papaya:L:Erwinia papaya:Erwinias papayas:E. papaya:
+Erwinia persicina:L:Erwinia persicina:Erwinias persicinas:E. persicinas:
+Erwinia psidii:L:Erwinia psidii:Erwinias psidiis:E. psidii:
+Erwinia pyrifoliae:L:Erwinia pyrifoliae:Erwinias pyrifoliaes:E. pyrifoliae:
+Erwinia rhapontici:L:Erwinia rhapontici:Erwinias rhaponticis:E. rhapontici:
+Erwinia toletana:L:Erwinia toletana:Erwinias toletanas:E. toletana:
+Erwinia tracheiphila:L:Erwinia tracheiphila:Erwinia tracheiphila:E. tracheiphila:
+Erwinia uredovora:L:Erwinia uredovora:Erwinias uredovoras: E. uredovora:
+Erwinia chrysanthemi:L:Erwinia chrysanthemi:Dickeya dadantii:E. chrysanthemi:
+Dartrose:L:Dartrose:dartrose de la pomme de terre:dartroses: Point noir: Points noirs:Colletotrichum coccodes:

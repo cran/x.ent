@@ -62,10 +62,14 @@ sub ApplyRuleDate
 sub ApplyRuleForSmallDico
 {
 	#check for stades
-	my ($line,$exp,%dico) = @_;
-	while(my ($key,$value)=each(%dico))
+	my ($data,$old_data,$tag,%dico) = @_;
+	#a variable stocks result temp
+	my %result_temp  = ();
+	my @arr_keys = (keys %dico);
+	my @sorted_keys = sort { length $b <=> length $a } @arr_keys;#purpose: words longer will find first 
+	foreach(@sorted_keys)
 	{
-		my @lstSyn = @{$value};
+		my @lstSyn = @{$dico{$_}};
 		my @sorted = sort { length $b <=> length $a } @lstSyn;
 		#my $lab;
 		my $lab = $sorted[0];
@@ -77,28 +81,35 @@ sub ApplyRuleForSmallDico
 		if($lab =~ /\./gm)
 		{
 			$lab =~ s/\./\\./gm;#check dans le dictionnaire a le charactère spéciale
-		}
-		if( $line =~ /['\\\/\[\]\{\},.?;!\(\)\" \t]+($lab)[\\\/\[\]\{\},.?;!\(\)\" \t]+/i) {
-			$line =~ s/(['\\\/\[\]\{\},.?;!\(\)\" \t]+)($lab)([\\\/\[\]\{\},.?;!\(\)\" \t]+)/$1$2 <$exp>$2<\/$exp> $2$3/gi;
+		}	
+		if( $data =~ /['\\\/\[\]\,.?;:!—\(\)\" \t]($lab)[\\\[\]\,.?;:!\(\)\" \t]/i) {
+			#$result_temp{$1}++;
+			$data =~ s/(['\\\/\[\]\,.?;:!—\(\)\" \t])($lab)([\\\[\]\,.?;:!\(\)\" \t])/$1$2 <$tag>$2<\/$tag> $2$3/gi;
 			#print $lab."\n";
 			#last;
 		}
-		#if( $line =~ /^($lab)[\\\/\[\]\{\},?;.!\(\)\" \t]+/i) {
-		#	$line =~ s/^($lab)[\\\/\[\]\{\},?;.!\(\)\" \t]+/ $1 <$exp>$1<\/$exp> $1 /gi;
+		#if it is the first paragraph
+		if( $data =~ /[\{\}]($lab)[\\\[\]\{\},?;:.!\(\)\" \t]/i) {
+			#$result_temp{$1}++;
+			$data =~ s/([\{\}])($lab)([\\\[\]\{\},?;:.!\(\)\" \t])/$1<$tag>$2<\/$tag> $2$3/gi;
 			#last;
-		#}		
+		}	
 	}
-	return $line;
+	#every dictionary, we must check conflict
+	#check conflict in the results if it is contient in the words longer.
+	$data = Modules::Structure::CheckConclictTag($data,$old_data,$tag);
+	return $data;
 }
 #car le dictionnaire de ville très gros, alternative trouver chaque mots dans le dictionnaire entre le corpus, je fais contre
 sub ApplyRuleForBigDico
 {
-	my ($data,$exp,%dico) = @_;
+	my ($data,$old_data,$tag,%dico) = @_;
 	my %ListMots          = ();
 	my %ListNomDico       = ();
 	my %ListCommuneForDoc = ();
 	#appliquer n grams
-	my @words = split /[{S}.,?;:!() ]/,$data;
+	my $test = "";
+	my @words = split /[\{\}.,?;:!\(\) ]/,$data;
 	for my $pos (0 .. $#words) {
 	  for my $phrase_len (0 .. ($pos >= $N_GRAM ? $N_GRAM - 1 : $pos)) {
 	    my $phrase = join ' ', @words[($pos - $phrase_len) .. $pos];
@@ -106,10 +117,12 @@ sub ApplyRuleForBigDico
 	    if($phrase ne "")
 	    {
 	    	 $ListMots{$phrase}++;
-	    	 #print $phrase."\n";	
+	    	 #print $phrase."\n";
+	    	 $test .= $phrase."\n";	
 	    }
 	  }
 	} 
+	#Modules::Utils::SaveFile("./data/temp/test.txt",$test);
 	#enlever stop words
 	if ( length( $Modules::Parametre::FILE_STOP_WORD || '' )) {
 		my @stopwords = Modules::Dico::LoadDicoNameAndSyn($Modules::Parametre::FILE_STOP_WORD);
@@ -139,13 +152,19 @@ sub ApplyRuleForBigDico
 
 	#check for communes
 	while (my ($key, $value) = each(%ListCommuneForDoc)){
-		if($data =~  /[\\\/\[\]\{\}.,?;!\(\)\" \t]+($key)[\\\/\[\]\{\}.,?;!\(\)\" \t]+/i) {
-			$data =~ s/([\\\/\[\]\{\}.,?;!\(\)\" \t]+)($key)([\\\/\[\]\{\}.,?;!\(\)\" \t]+)/$1$2 <$exp>$2<\/$exp> $2$3/gi;
+		#delete \/
+		if($data =~  /[\\\[\]\{\}.,?;!—\(\)\" \t]+($key)[\\\[\]\{\}.,?;:!\(\)\" \t]+/i) {
+			$data =~ s/([\\\[\]\{\}.,?;!—\(\)\" \t]+)($key)([\\\[\]\{\}.,?;:!\(\)\" \t]+)/$1$2 <$tag>$2<\/$tag> $2$3/gi;
 		}
-		#if( $data =~  /^($key)[\\\/\[\]\{\}.,?;!\(\)\" \t]+/) {
-		#	$data =~ s/^($key)[\\\/\[\]\{\}.,?;!\(\)\" \t]+/ $1 <$exp>$1<\/$exp> $1 /g;
-		#}
-	}			
+		#if it is a paragraph
+		if( $data =~ /[\{\}]+($key)[\\\[\]\{\},?;:.!\(\)\" \t]+/i) {
+			$data =~ s/([\{\}]+)($key)([\\\[\]\{\},?;:.!\(\)\" \t]+)/$1<$tag>$2<\/$tag> $2$3 /gi;
+			#last;
+		}
+	}		
+	#every dictionary, we must check conflict
+	#check conflict in the results if it is contient in the words longer.
+	$data = Modules::Structure::CheckConclictTag($data,$old_data,$tag);	
 	return $data;
 }
 #extraire les données, mis à jour les résultats dans un variable global (résulat de tout le document)
@@ -163,7 +182,7 @@ sub ExtractDataGlobal
 		{
 			#trim both ends
 			$myarray[$i] =~ s/^\s+|\s+$//g;
-			$r{$myarray[$i]}++;
+			$r{$myarray[$i]}++;#tous les caractères sont lower case
 		}
 	}
 	return %r;
@@ -197,7 +216,7 @@ sub ExtractDataParagraphe
 	{
 		for(my $i=0; $i < @myarray; $i++)
 		{
-			$r{$myarray[$i]} = index($lineOginal,$myarray[$i]);
+			$r{$myarray[$i]} = index($lineOginal,$myarray[$i]);#return -1 if not found
 			#print $myarray[$i]."\n";
 		}
 	}
@@ -222,7 +241,6 @@ sub FilterResult
 				my %test = ();
 				foreach my $d (keys %temp)
 				{
-					
 					$pos = index($$data,">".$d."<",0);
 					#print "$d:$pos\n";
 					#verifier la date valable ou pas
@@ -412,21 +430,24 @@ sub RemoveBlackList
 	for my $key (keys %black_list)
 	{
 		#clé est un tag "v" ou "c" ....
-		my %tmp = %{$results{$key}};
-		my $file = $black_list{"$key"};
-		my %list = Modules::Dico::LoadDicoNameAndSyn($file);
-		for my $lst (keys %list)
+		if(exists $results{$key})
 		{
-			my @valeurs = @{$list{$lst}};
-			foreach(@valeurs)
+			my %tmp = %{$results{$key}};
+			my $file = $black_list{"$key"};
+			my %list = Modules::Dico::LoadDicoNameAndSyn($file);
+			for my $lst (keys %list)
 			{
-				if (exists $tmp{$_})
+				my @valeurs = @{$list{$lst}};
+				foreach(@valeurs)
 				{
-					delete $tmp{$_};
+					if (exists $tmp{$_})
+					{
+						delete $tmp{$_};
+					}
 				}
 			}
+			%{$results{$key}} = %tmp;
 		}
-		%{$results{$key}} = %tmp;
 	}
 	return %results;
 }

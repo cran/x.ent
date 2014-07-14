@@ -25,7 +25,7 @@
         output+="<tr><td></td><td><font color=red>(*)</font><i> This field is mandatory! The file or folder have a full path.</i></></td></tr>";
 
         output+="<tr><td colspan=7><hr/></td></tr><tr><td colspan=7><b>Dico</b></td></tr><tr><td colspan =7><table id= tblDico border=1 width = 100% cellspading =0 cellespacing=0>";
-        output+="<tr><td align =center>Tag result</td><td align =center>File dico</td><td align =center>Node</td><td align =center>Column key</td><td align =center>Comumn value</td><td align =center>Get value</td><td align =center width =50>Action</td></tr>";
+        output+="<tr><td align =center>Tag result</td><td align =center>File dico</td><td align =center>Node</td><td align =center>Column key</td><td align =center>Column value</td><td align =center>Get value</td><td align =center width =50>Action</td></tr>";
         output+="<tr><td align=center><input type=text id = idTag></td>";
         output+="<td><input type=file id=idFile></td>";
         output+="<td align=center><select id= idNode><option value=false>false</option><option value=true>true</option></select></td>"
@@ -222,7 +222,7 @@
           $('input[id^=btnDel1]').click(function () {
             var row = $(this).parent().parent();
             var row_idx = row.prevAll().length;
-             if(confirm("delete this row?"))
+             if(confirm("Do you want to delete this row?"))
              {
                delete data.dico.splice(row_idx-2,1);
                row.remove();
@@ -257,7 +257,7 @@
            $('input[id^=btnDelUnitex1]').click(function () {
             var row = $(this).parent().parent();
             var row_idx = row.prevAll().length;
-             if(confirm("delete this row?"))
+             if(confirm("Do you want to delete this row?"))
              {
                delete data.unitex.system.dico.splice(row_idx-2,1);
                row.remove();
@@ -315,7 +315,7 @@
            $('input[id^=btnDelUnitex2]').click(function () {
             var row = $(this).parent().parent();
             var row_idx = row.prevAll().length;
-             if(confirm("delete this row?"))
+             if(confirm("Do you want to delete this row?"))
              {
                delete data.unitex.result.splice(row_idx-2,1);
                row.remove();
@@ -380,7 +380,7 @@
           $('input[id^=btnDelRelation]').click(function () {
           var row = $(this).parent().parent();
           var row_idx = row.prevAll().length;
-           if(confirm("delete this row?"))
+           if(confirm("Do you want  to delete this row?"))
            {
              delete data.relation.link.splice(row_idx-2,1);
              row.remove();
@@ -555,7 +555,7 @@
            $('input[id^=btnDelBlacklist]').click(function () {
             var row = $(this).parent().parent();
             var row_idx = row.prevAll().length;
-             if(confirm("delete this row?"))
+             if(confirm("Do you want to delete this row?"))
              {
                delete data.blacklist.splice(row_idx-2,1);
                row.remove();

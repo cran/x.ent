@@ -7,11 +7,11 @@
  Graph \code{xplot}, this graph compares the appearance of entities or relations during one period
 }
 \usage{
-  xplot(e1 = "", e2 = "", t = "")
+  xplot(v1 = "", v2 = "", t = "")
 }
 \arguments{
-  \item{e1}{O or 1 entity1 value }
-  \item{e2}{a vector of entity2 value}
+  \item{v1}{O or 1 entity1 value }
+  \item{v2}{a vector of entity2 value}
   \item{t}{a time value, format (mm.yyyy) or inteval of time value, for example: t=c("02.2010","02.2012")}
 }
 \details{
@@ -28,7 +28,7 @@
               \item column date : (format mm.yyyy)
               \item column value_date, this value is used for creating graph
               \item column visible: if visible = 1 then this record will be used in graph  
-              \item column value of entite \code{e1} or \code{e2} or \code{e1} combined with \code{e2}
+              \item column value of entite \code{v1} or \code{v2} or \code{v1} combined with \code{v2}
             }
 }
 \value{
@@ -36,13 +36,14 @@
   \item{dataframe}{return a data frame}
 }
 \examples{
-  xplot(e1="colza")
-  xplot(e1="colza",e2=c("altice","rouille"))
-  xplot(e1="colza",e2=c("altice","rouille"),t="09.2010")
-  xplot(e1="colza",e2=c("altice","rouille"),t=c("09.2010","02.2011"))
+  xplot(v1="colza")
+  xplot(v1="colza",v2=c("altice","rouille"))
+  xplot(v1="colza",v2=c("altice","rouille"),t="09.2010")
+  xplot(v1="colza",v2=c("altice","rouille"),t=c("09.2010","02.2011"))
 }
 \seealso{
   \code{\link{xhist}} type graphique histogram\cr
+  \code{\link{xprop}} type graphique propotion\cr
   \code{\link{xshow}} displays results of extracted data\cr
   \code{\link{xconfig}} system configuration\cr
 }

@@ -49,10 +49,13 @@ my $FILE_OUTPUT = $config->{result}->{file};;#$dir_temp."/output.txt";
 #print "Output:".$FILE_OUTPUT."\n";
 my $FILE_EVAL = $config->{eval}->{file};
 #print "Eval:".$FILE_EVAL."\n";
-my $FILE_REPLACE = $dir."dico/".$config->{replace}->{file};
+my $FILE_REPLACE = $config->{replace}->{file};
 #print "Replace:".$FILE_REPLACE."\n";
-my $FILE_AVOID = $dir."dico/".$config->{avoid}->{file};
-my $FILE_STOP_WORD = $dir."dico/".$config->{stopword}->{file};
+my $FILE_AVOID = $config->{avoid}->{file};
+my $FILE_STOP_WORD = $config->{stopword}->{file};
+if (length($FILE_STOP_WORD || '')) {
+  $FILE_STOP_WORD = $dir."dico/".$FILE_STOP_WORD;
+}
 my %BLACK_LIST = ();
 $Modules::Parametre::FILE_STOP_WORD = $FILE_STOP_WORD;
 my %DICO = ();
@@ -180,11 +183,11 @@ foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
 	#$data = Modules::Utils::NormailezeData($data);
 	
 	if ( length( $FILE_REPLACE || '' )) {
-		$data = Modules::Utils::ReplaceWord($data,$FILE_REPLACE);
+  	$data = Modules::Utils::ReplaceWord($data,$dir."dico/".$FILE_REPLACE);
 	}
 	#avoid
 	if ( length( $FILE_AVOID || '' )) {
-		$data = Modules::Utils::AvoidPhase($data,$FILE_AVOID,\%DICO,\%TAG_DICO);	
+		$data = Modules::Structure::AvoidPhase($data,$dir."dico/".$FILE_AVOID,\%DICO,\%TAG_DICO);	
 	}
 	#
 	if (($TOOL_UNITEX ne "") && ($MAIN_GRAPH ne "") && ($MY_UNITEX ne ""))
@@ -210,17 +213,17 @@ foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
 	{
 		if($TYPE_TROUVE{$key} eq $Modules::Parametre::TROUVE_CORPUS)
 		{
-			$data = Modules::Entite::ApplyRuleForSmallDico($data,$TAG_DICO{$key},%{$DICO{$key}});
+			$data = Modules::Entite::ApplyRuleForSmallDico($data,$old_data,$TAG_DICO{$key},%{$DICO{$key}});
 		}
 		else
 		{
-			$data = Modules::Entite::ApplyRuleForBigDico($data,$TAG_DICO{$key},%{$DICO{$key}});
+			$data = Modules::Entite::ApplyRuleForBigDico($data,$old_data,$TAG_DICO{$key},%{$DICO{$key}});
 		}
 	}
 	print "Finish processing dico\n";
 	#vérifier des conflits
 	#print "$old_data\n";
-	$data = Modules::Utils::CheckConfict($data,$old_data,\%TAG_DICO,\%TAG_UNITEX);
+	$data = Modules::Structure::CheckConfict($data,$old_data,\%TAG_DICO,\%TAG_UNITEX);
 	#print "$data\n";
 	#récupérer des résultats
 	my %result = (); #en stocken le résultat
@@ -241,6 +244,12 @@ foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
 	#vérifier le résultat routourné
 	%result = Modules::Entite::FilterResult(\$data,\%result,\%TYPE_GET);
 	
+  for my $key (keys %TAG_UNITEX)
+	{
+		#$key -> CLI->c
+		$data =~ s/<$key>/<$TAG_UNITEX{$key}>/g;
+		$data =~ s/<\/$key>/<\/$TAG_UNITEX{$key}>/g;
+	}
 	#en créant les rélations
 	my $relation = "";#en stokant tous les rélation
 	if (exists($config->{"relation"}))
@@ -250,9 +259,9 @@ foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
 		my @links = @{$config->{"relation"}->{"link"}};
 		if ( length( $root || ''))
 		{
-			my @phrases = Modules::Relation::TransformerData($data,$root);
+			my @phrases = Modules::Structure::TransformerData($data,$root);
 			#Modules::Utils::PrintArray(@phrases);
-			my %final = Modules::Relation::CreateRelation(\@phrases,\@links,\$neg,\%result);
+			my %final = Modules::Relation::CreateRelation(\@phrases,\$root,\@links,\$neg,\%result);
 			for my $key (keys %final)
 			{
 				$relation .= "$f_name:$key\n";

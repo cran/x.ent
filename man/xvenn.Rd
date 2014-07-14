@@ -4,13 +4,14 @@
   Graph \code{xvenn}
 }
 \description{
-  Here is a graph of type Venn diagram. The Venne that shows all possible logical relations between a finite collection of sets. Graph \code{xvenn} provides funtionality that users can compare values of entities appearance simultaneously in bulletins. 
+  Here is a graph of type Venn diagram. The Venne that shows all possible logical relations between a finite collection of sets. Graph \code{xvenn} provides funtionality that users can compare values of entities or relations appearing simultaneously in bulletins. 
 }
 \usage{
-xvenn(e)
+xvenn(v,e=NULL)
 }
 \arguments{
-  \item{e}{ a vector of values, this vector must be greater than 2 }
+  \item{v}{ a vector of values, this vector must be greater than 2 }
+  \item{e}{ a vector of entities, e.x: "m", "b"}
 }
 \details{
   Result after calling the function \code{xparse} has the following format:
@@ -38,15 +39,17 @@ This function returns a vector so that users can check or use it to create new g
 \item{vector}{return a vector has format above}
 }
 \author{
-  Tien Phan
+  Tien T. Phan
 }
 \seealso{
   \code{\link{xhist}} type graphique histogram\cr
   \code{\link{xplot}} type graphique plot\cr
+  \code{\link{xprop}} type graphique propotion\cr
 }
 \examples{
-  xvenn(c("chou","colza"))
-  xvenn(c("chou","colza","orge"))
+  xvenn(v=c("chou","colza"))
+  xvenn(v=c("chou","colza","orge"))
+  xvenn(v=c("chou","colza","orge"),e=c("b","m"))
 }
 \keyword{graphe}
 \keyword{venn diagram}

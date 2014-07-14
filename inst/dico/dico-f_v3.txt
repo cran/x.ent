@@ -1071,7 +1071,7 @@ acide benzènesulfonique, dérivés mono-alkyles en c10-14, sels de sodium:
 acide benzènesulfonique, dérivés mono-alkyles en c10-16, sels de sodium:
 acide borique:
 acide butyrique:
-acide carboxylique de l’ethoxylate nonylphenolique \(plan d’action ospar 1995\):
+acide carboxylique de l'ethoxylate nonylphenolique \(plan d'action ospar 1995\):
 acide chloroacétique:
 acide chlorosulfurique:
 acide citrique:
@@ -1779,7 +1779,7 @@ carbonate de baryum:
 carbonate de bis\(2,4-dichloro-5-nitrophényle\):
 carbonate de diméthyle:
 carbonate de diphényle:
-carbonate de disodium, composé avec peroxyde d'hydrogène\(2:3\):
+carbonate de disodium, composé avec peroxyde d'hydrogène\(2\:3\):
 carbonate de dithallium:
 carbonate de nickel:
 carbonate de plomb:
@@ -2106,7 +2106,7 @@ dasatinib:
 dazomet:
 ddd - o,p':
 ddd-p,p':
-dde - o,p’:
+dde - o,p':
 dde-p,p':
 ddt - o,p':
 ddt - p,p':
@@ -3665,7 +3665,7 @@ omeprazole:
 omethoate:
 op1oe:
 op2oe:
-organohalogénés \(toxiques, persistants et susceptibles de bioaccumulation \(plan d’action ospar 1996-1997\):
+organohalogénés \(toxiques, persistants et susceptibles de bioaccumulation \(plan d'action ospar 1996-1997\):
 orlistat:
 orthophenylphenol:
 orthophosphates:
@@ -3763,8 +3763,8 @@ para-sec-butylphenol:
 para-tert-octylphenol:
 paraffin waxes and hydrocarbon waxes, chloro, reaction products with naphthalene:
 paraffines chlororées:
-paraffines chlorées, à chaîne longue \(plan d’action ospar pour l’année 1992\):
-paraffines chlorées, à chaîne moyenne et longue \(plan d’action ospar pour l’année 1992\):
+paraffines chlorées, à chaîne longue \(plan d'action ospar pour l'année 1992\):
+paraffines chlorées, à chaîne moyenne et longue \(plan d'action ospar pour l'année 1992\):
 paraffines normales:
 paraffines normales \(pétrole\), c5-20:
 paraquat:
@@ -3918,7 +3918,7 @@ peroxynéodécanoate de tert-butyle:
 peroxypivalate de tert-butyle:
 perylene-3,4:9,10-tetracarboxylic dianhydride:
 perylène:
-pesticides \(agriculture, horticulture et sylviculture\) \(plan d’action ospar 1992\):
+pesticides \(agriculture, horticulture et sylviculture\) \(plan d'action ospar 1992\):
 pesticides organochlores:
 pethoxamid:
 pfos \(acide de\):
@@ -4269,7 +4269,7 @@ resin acids and rosin acids, hydrogenated, esters with glycerol:
 resin acids and rosin acids, hydrogenated, esters with pentaerythritol:
 resin acids and rosin acids, hydrogenated, esters with triethylene glycol:
 resmethrine:
-retardateurs de flamme au brome \(plan d’action ospar 1992\):
+retardateurs de flamme au brome \(plan d'action ospar 1992\):
 riluzole \(2-benzothiazolamine, 6-\(trifluoromethoxy\)-\):
 rimsulfuron:
 risperidone:
@@ -4410,7 +4410,7 @@ solvant naphta aromatique léger \(pétrole\):
 solvant naphta naphténique léger \(pétrole\), hydrotraité:
 solvant stoddard:
 solvants aox \(halogénés volatils\):
-solvants halogénés \(plan d’action ospar pour l’année 1995\):
+solvants halogénés \(plan d'action ospar pour l'année 1995\):
 sotalol:
 soufre:
 soybean oil, epoxidized:
@@ -4434,7 +4434,7 @@ strychnidin-10-on, 2,3-dimethoxy-, verbindung mit \(s\)-mono\(1-methylheptyl\)-1
 strychnine:
 styrene-7,8-oxide:
 styrène:
-substances suspectées d’avoir des effets endocriniens ou pseudo-hormonaux:
+substances suspectées d'avoir des effets endocriniens ou pseudo-hormonaux:
 substituts du dehp:
 succinate de disodium:
 sucralose:

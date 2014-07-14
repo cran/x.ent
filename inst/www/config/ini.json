@@ -36,15 +36,15 @@
 	{
 		"system":
 		{
-		 	"tool_unitex":"/Volumes/MacOS/Users/phantrongtien/Documents/Unitex/UnitexToolLogger",
-		 	"main_graph":"/Volumes/MacOS/Users/phantrongtien/unitex/French/Graphs/Projet/VESPA.grf",
-		 	"my_unitex":"/Volumes/MacOS/Users/phantrongtien/unitex/French",
+		 	"tool_unitex":"/Volumes/MacOS/Users/phantrongtien/Unitex3.0/App/UnitexToolLogger",
+		 	"main_graph":"/Volumes/Data/Unitex/French/Graphs/Projet/VESPA.grf",
+		 	"my_unitex":"/Volumes/Data/Unitex/French",
 		 	"dico":
 		 		[
-		 		 "/Volumes/MacOS/Users/phantrongtien/unitex/French/Dela/dela-fr-public.bin",
-		 		 "/Volumes/MacOS/Users/phantrongtien/unitex/French/Dela/Delaf_Communes_France_FR_utf8.bin",
-		 		 "/Volumes/MacOS/Users/phantrongtien/unitex/French/Dela/Delaf_Toponyme_Departement_France_FR_utf8.bin",
-		 		 "/Volumes/MacOS/Users/phantrongtien/unitex/French/Dela/Delaf_Toponyme_Region_France_FR_utf8.bin"
+		 		 "/Volumes/MacOS/Users/phantrongtien/Dropbox/Projet_vespa/DicoUnitex/dela-fr-public.bin",
+		 		 "/Volumes/MacOS/Users/phantrongtien/Dropbox/Projet_vespa/DicoUnitex/Delaf_Communes_France_FR_utf8.bin",
+		 		 "/Volumes/MacOS/Users/phantrongtien/Dropbox/Projet_vespa/DicoUnitex/Delaf_Toponyme_Departement_France_FR_utf8.bin",
+		 		 "/Volumes/MacOS/Users/phantrongtien/Dropbox/Projet_vespa/DicoUnitex/Delaf_Toponyme_Region_France_FR_utf8.bin"
 		 	    ]
 		},
 		"result":
@@ -54,7 +54,8 @@
 		 { "tag":"z", "tag_unitex":"NEG","get":"all"},
 		 { "tag":"c", "tag_unitex":"CLI","get":"all"},
 		 { "tag":"d", "tag_unitex":"DAT","get":"1"},
-		 { "tag":"v", "tag_unitex":"VIL","get":"all"}
+		 { "tag":"v", "tag_unitex":"VIL","get":"all"},
+  	 { "tag":"nu", "tag_unitex":"BUL","get":"1"}
 		]
 	},
 "relation":

@@ -3,7 +3,7 @@ actinidia:L:ACTINIDIA:A. chinensis:Actinidia chinensis:kiwi:kiwis:actinidias:
 agrumes:N:AGRUMES:agrume:Citrus:Citronnier:Oranger:Pamplemoussier:Mandarinier:Clémentinier:Cédratier:kumquat:
 ail:L:AIL:A. sativum:Allium sativum:ails:
 amandier:L:AMANDIER:P. amygdalus:Prunus amygdalus:amande:amandes:amandiers:
-arbres fruitiers à pépins et à noyaux:N:ARBRES FRUITIERS à PEPINS ET à NOYAUX:Pommier:Poirier:Cognassier:Prunier:Pêcher:Cerisier:Abricotier:Amandier:
+arbres fruitiers:N:arbre fruitier:arbres fruitiers:fruitiers forestiers:fruitier forestier:arbres fruitiers à pépins et à noyaux:ARBRES FRUITIERS à PEPINS ET à NOYAUX:Pommier:Poirier:Cognassier:Prunier:Pêcher:Cerisier:Abricotier:Amandier:merisier:sorbier:alisier:cormier:
 artichaut:L:ARTICHAUT:C. scolymus:Cynara scolymus:artichauts:
 asperge:L:ASPERGE:A. officinalis:Asparagus officinalis:ASPERGES:
 aubergine:L:AUBERGINE:S. esculentum:Solanum esculentum:S. melongena:Solanum melongena:AUBERGINES:
@@ -18,14 +18,14 @@ carotte:L:CAROTTE:D. carota:Daucus carota:carottes:
 cassissier:L:CASSISSIER:R. nigrum:Ribes nigrum:cassissiers:cassis:
 Cédratier:L:Cédratier:Cédratiers:Cedratier:Cedratiers:Citrus medica:C. medica:
 céleri:L:CELERI:A. graveolens:Apium graveolens:celeris:céleri:céleris:
-céréales:N:cereale:cereales:céréale:céréales:Seigle:Avoine:Blé tendre:Blé d’hiver:Triticale:Riz:Sorgho:Millet:Blé noir:maïs:CEREALES A PAILLE:céréales à paille:céréales de printemps:cereales de printemps
+céréales:N:cereale:cereales:céréale:céréales:Seigle:Avoine:Blé tendre:Blé d'hiver:Triticale:Riz:Sorgho:Millet:Blé noir:maïs:CEREALES A PAILLE:céréales à paille:céréales de printemps:cereales de printemps
 cerisier:L:CERISIER:P. cerasus:Prunus cerasus:cerisiers:cerise:cerises:
 châtaignier:L:CHATAIGNIER:C. sativa:Castanea sativa:châtaignier:châtaigniers:chataigniers:châtaigne:châtaignes:chataigne:chataignes:
 chicorée:L:CHICOREE:C. intybus:Cichorium intybus:chicorée:chicorées:chicorees:
 chou:N:CHOU:CHOUX:Chou vert:Chou pommé:Chou-navet:Chou de Bruxelles:Chou-fleur:Chou-rave:Chou de Milan:Chou à grosses côtes:chou à choucroute:
 chou de bruxelles:L:CHOU DE BRUXELLES:B. oleracea:Brassica oleracea:choux de bruxelles:
 chou-fleur:L:CHOU-FLEUR:B. oleracea:Brassica oleracea:chous-fleurx:chou fleur:choux fleurs:
-chou à choucroute:L:chou à choucroute:chou a choucroute:
+chou à choucroute:L:chou à choucroute:chou a choucroute:choux à choucroute:choux a choucroute:
 Citronnier:L:Citronnier:Citronniers:C. limon:Citrus limon:citron:citrons:
 citrouille:L:CITROUILLE:C. pepo:Cucurbita pepo:citrouille:
 Clémentinier:L:Clémentinier:Clémentiniers:Clementinier:Clementiniers:Citrus reticulata:C. reticulata:Clementine:Clementines:Clémentine:Clémentines:
@@ -37,6 +37,8 @@ courge:L:COURGE:C. moschata:Cucurbita moschata:C. pepo:Cucurbita pepo:courges:
 courgette:L:COURGETTE:C. pepo:Cucurbita pepo:courgettes:
 cucurbitaceae:N:CUCURBITACEAE:concombre:Courge:Courgette:Citrouille:Potiron:Pastèque:Concombre:Melon:
 cultures légumières:N:CULTURES LEGUMIERES:carotte:betterave:aubergine:artichaut:asperge:lentille:épinard:céleri:fève:féverole:haricot:navet:radis:poivron:poireau:
+cultures maraîchères:N:cultures maraîchères:culture maraîchère:culture maraichere:CULTURES MARAICHERES:
+cultures fruitières:N:CULTURES FRUITIERES:culture fruitière:cultures fruitieres:
 dactyle:L:DACTYLE:D. glomerata:Dactylis glomerata:dactyles:
 échalote:L:ECHALOTE:A. ascalonicum:Allium ascalonicum:échalote:échalotes:echalotes:
 endive:L:ENDIVE:C. endivia:Cichorium endivia:endives:
@@ -73,9 +75,9 @@ oignon:L:OIGNON:A. cepa:Allium cepa:oignons:
 oléagineux:N:oléagineux:OLEAGINEUX:Colza:Tournesol:Olivier:Soja:Lin:
 olivier:L:OLIVIER:O. europaea:Olea europaea:oliviers:olive:olives:
 Oranger:L:Oranger:Orangers:C. sinensis:Citrus sinensis:Orange:Oranges:
-orge:N:ORGE:orges:orge d’hiver:orge de printemps:
+orge:N:ORGE:orges:orge d'hiver:orge de printemps:
 orge de printemps:L:ORGE DE PRINTEMPS:H. vulgare:Hordeum vulgare:orges de printemps:
-orge d’hiver:L:orge d’hiver:H. vulgare:Hordeum vulgare:escourgeon:escourgeons:orges d’hiver:
+orge d'hiver:L:orge d'hiver:H. vulgare:Hordeum vulgare:escourgeon:escourgeons:orges d'hiver:
 Pamplemoussier:L:Pamplemoussier:Pamplemoussiers:C. maxima:Citrus maxima:Pamplemousse:Pamplemousses:
 pastèque:L:PASTEQUE:C. vulgaris:Citrullus vulgaris:pasteque:pasteques:pastèques:
 pêcher:L:PECHER:P. persicae:Prunus persicae:pechers:pêcher:pêchers:
@@ -85,14 +87,14 @@ poireau:L:POIREAU:A. porrum:Allium porrum:poireaux:
 poirier:L:POIRIER:P. communis:Pirus communis:poiriers:poires:poire:
 pois chiche:L:POIS CHICHE:C. arietinum:Cicer arietinum:
 pois de printemps:L:pois de printemps:P. sativum:Pisum sativum:
-pois d’hiver:L:pois d’hiver:P. sativum:Pisum sativum:
-pois protéagineux:N:pois protéagineux:POIS PROTEAGINEUX:pois de printemps:pois d’hiver:pois:Protéagineux d’hiver:Proteagineux d’hiver:Protéagineux de printemps:Proteagineux de printemps:
+pois d'hiver:L:pois d'hiver:P. sativum:Pisum sativum:
+pois protéagineux:N:pois protéagineux:POIS PROTEAGINEUX:pois de printemps:pois d'hiver:pois:Protéagineux d'hiver:Proteagineux d'hiver:Protéagineux de printemps:Proteagineux de printemps:
 poivron:L:POIVRON:C. annuum:Capsicum annuum:poivrons:
 pomme de terre:L:POMME DE TERRE:S. tuberosum:Solanum tuberosum:pommes de terre:patate:patates:Cartoufle:Cartoufles:
 pommier:L:POMMIER:M. domestica:Malus domestica:pommiers:pomme:pommes:
 prunier:L:PRUNIER:P. domestica:Prunus domestica:pruniers:prunes:prune:
 radis:L:RADIS:R. sativus:Raphanus sativus:
-Ray-grass:L:Ray-grass:L. perenne:Lolium perenne:ray-grass d’Italie:
+Ray-grass:L:Ray-grass:L. perenne:Lolium perenne:ray-grass d'Italie:
 riz:L:RIZ:O. sativa:Oryza sativa:
 sainfoin:L:SAINFOIN:O. sativa:Onobrychis sativa:sainfoins:
 salsifis:L:SALSIFIS:T. porrifolius:Tragopogon porrifolius:
@@ -111,7 +113,7 @@ Trèfle rouge:L:Trèfle rouge:T. rubens:Trifolium rubens:Trefle rouges:Trefles r
 vesce:L:VESCE:V. sativa:Vicia sativa:vesces:
 vigne:L:VIGNE:V. vinifera:Vitis vinifera:vignes:raisin:
 proteagineux:N:protéagineux:proteagineux:pois protéagineux:féverole:
-légumineuse:N:légumineuse:légumineuses:legumineuse:legumineuses:Pois chiches:fève:haricot blanc:haricot rouge:haricot noir:
+légumineuse:N:légumineuse:légumineuses:legumineuse:legumineuses:Pois chiches:fève:haricot blanc:haricot rouge:haricot noir:pois fourrager:
 haricot blanc:L:haricot blanc:haricots blancs:
 haricot rouge:L:haricot rouge:haricots rouges:
 haricot noir:L:haricot noir:haricots noirs:

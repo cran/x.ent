@@ -7,10 +7,10 @@
 The function \code{xhist} in x.ent is a graphical representation of the distribution of entities with time.
 }
 \usage{
-  xhist(e = "")
+  xhist(v = "")
 }
 \arguments{
-  \item{e}{a value of entity or the relations between entities }
+  \item{v}{a value of entity or the relations between entities }
 }
 \details{
 Result after calling the function \code{xparse} has the following format:
@@ -34,8 +34,8 @@ This function returns a data frame so that users can check or use it to create n
 }
 \examples{
   xhist() #all documents
-  xhist(e="colza") #only documents contain "colza"
-  xhist(e="colza:altise") #only documents contain a relation "colza:altise"
+  xhist(v="colza") #only documents contain "colza"
+  xhist(v="colza:altise") #only documents contain a relation "colza:altise"
 }
 \seealso{
   \code{\link{xplot}} type graphique plot\cr
