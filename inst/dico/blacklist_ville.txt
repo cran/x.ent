@@ -1,0 +1,9 @@
+Seuil:
+Aucun:aucun:
+Son:
+Y:
+Eu:
+Ay:
+Rouillé:ROUILLE:Rouille:
+Moyen:MOYEN:
+Bonnes:bonnes:

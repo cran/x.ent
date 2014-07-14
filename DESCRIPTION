@@ -1,0 +1,17 @@
+Package: x.ent
+Type: Package
+Title: eXtraction of ENTity
+Description: x.ent is  a system for extracting information (entities and relations between them) in text datasets. It also emphasizes results exploration with graphical displays. It is a rule-based system and works with hand-made dictionaries and local grammars defined by users. x.ent has been written in perl and use javascript to define user preferences through a browser. Local grammars are defined and compiled with the tool Unitex, developed by University Paris Est, and supporting multiple languages. See ?xconfig  for an introduction.
+Version: 0.0.4
+Date: 2014-07-14
+Author: Nicolas Turenne <nturenne.inra@yahoo.fr>, Tien Phan  <phantien84@gmail.com>
+Depends: R (>= 3.0.0),opencpu,rJava
+Imports: stringr,xtable,jsonlite,venneuler
+Maintainer: Tien Phan <phantien84@gmail.com>
+License: GPL-3
+SystemRequirements: Perl (>= 5.0), Unitex (>= 3.0
+        http://www-igm.univ-mlv.fr/~unitex/)
+Packaged: 2014-08-19 23:26:06 UTC; phantrongtien
+NeedsCompilation: no
+Repository: CRAN
+Date/Publication: 2014-08-20 06:12:26

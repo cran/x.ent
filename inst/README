@@ -1,0 +1,16 @@
+Package x.ent
+Title: eXtraction of ENTity
+Description: x.ent allows to extract data entities in corpora. It uses grammars and dictionaries which are defined by users. This is a cross-platform Perl base R function for extraction and relation between entities in corpora.
+For running this package, System installation requirements:
+- Perl (> v5.16.2)
+- Tool Unitex (optional)
+For testing this package, in the installation directory of the package x.ent, there are folders:
+- corpus: 37 bulletins in agriculture (French)
+- eval : evaluation file eval.txt of 37 files in the folder corpus, it was annotated manually.
+- dico: contains dictionnaires (French) of plants, diseases, bioagressors ...
+- Unitex: contains grammars and dictionaires for tool Unitex
+You could copy folders corpus, eval, out or Unitex in the installation folder x.ent to your local folder, then type xconfig() in the terminal R for configuring the system.
+Steps for running:
+>xconfig() for configuring the system
+>xparse() for extracting information
+then xshow(...), xhist(...), xplot(...), xvenn(...) for anylysing
