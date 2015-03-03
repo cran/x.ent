@@ -1,13 +1,14 @@
 Arrêté du:phrase:
-Mieux connaître la réglementation:phrase:
+Mieux connaître la réglementation:end:
 Résistances des maladies:phrase:
 ABONNEMENT INDIVIDUEL:phrase:
+CETA:phrase:
 Collecte des produits non utilisables:phrase:
 Ce bulletin est produit à partir d'observations:phrase:
 Bulletin édité sous la responsabilité de la Chambre Régionale d'Agriculture:phrase:
 Informations sur la réglementation:phrase:
 Informations maladies foliaires:phrase:
-Message réglementaire Avertissements Agricoles:phrase:
+Message réglementaire Avertissements Agricoles:end:
 Infos règlementaires:phrase:
 Crédits photos:phrase:
 Pour les féveroles:phrase:
@@ -24,13 +25,15 @@ Note d’information sur:phrase:
 Note nationale:phrase:
 Etat des lieux et recommandations:phrase:
 Grille d'évaluation:phrase:
-Prochains:phrase:
+Prochains:end:
 Le SRVP vous invite:end:
 LUTTE CONTRE:end:
 DRAF:bracket:phrase:
 Coordination et renseignements:phrase:
 Pesticides homologués:end:
 Note sur:end:
-DESHERBAGE:end:
+DESHERBAGE:phrase:
 Pesticides en autorisation provisoire de vente:end:
 Produits pesticides en autorisation provisoire de vente:end:
+Crédit photo:end:
+Localisation des observations:end:

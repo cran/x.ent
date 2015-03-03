@@ -92,6 +92,95 @@ sub LoadFile
 	#print "Count relation: $count_relation\n";
 	return %hash;
 }
+#author: PHAN Trong Tien
+#date: 16/02/2015
+#function: save results' relation
+#format: relation,n_left,n_right,precision,recall,f-mesure
+#input: evaluation file, extraction relation file
+#output: a string has a format above
+sub SaveEvaluationRelation
+{
+	my ($file_eval,$file_output,$n_left,$n_right) = @_;
+	%data_eval = LoadFile($file_eval);
+	%data_result = LoadFile($file_output);
+	#relation
+	my %countR_X = ();#eval
+	my %countR_Y = ();#result
+	my %countR_X_Y = ();#réunion entre la evaluation et le résultat
+	my (@data_X,@data_Y);
+	while(my ($key,$value)=each(%data_result))
+	{
+		@data_Y = @{$value};
+		my @entites = split(/[\:]/,$key);
+		if (scalar(@entites) ne 2) #rélations
+		{
+			#calculer pour chaque relation par exemple: p:s
+			if($key =~ m/$entites[0]:(.*)\:/g)
+			{
+				$countR_Y{$1} += scalar(@data_Y);#result
+				if(exists $data_eval{$key})
+				{
+					my %valuesR_X = ();
+					my $val = ();
+					@data_X =  @{$data_eval{$key}};
+					foreach(@data_X)
+					{
+						$val = $_;
+						$valuesR_X{$val}++;
+					}
+					$countR_X{$1} += Modules::Utils::SizeHash(%valuesR_X);;#eval
+					foreach(@data_Y)
+					{
+						if(exists $valuesR_X{$_})
+						{
+							$countR_X_Y{$1}++;
+						}	
+					}
+				}
+			}	
+		}
+	}
+	my $output = "";
+	#précision et rappel relation
+	my $count_relation_X = 0;#X est eval
+	my $count_relation_Y = 0;#Y est result
+	my $count_relation_X_Y = 0;
+	foreach my $key (keys %countR_Y)
+	{
+		if(exists($countR_X{$key}))
+		{
+			$count_relation_X += $countR_X{$key};	
+		}
+		if(exists($countR_Y{$key}))
+		{
+			$count_relation_Y += $countR_Y{$key};
+		}
+		if(exists $countR_X_Y{$key})
+		{
+			$count_relation_X_Y += $countR_X_Y{$key};
+			my $precision = $countR_X_Y{$key}*100/$countR_Y{$key};
+			my $recall = $countR_X_Y{$key}*100/$countR_X{$key};
+			my $f_mesure = (2*$recall*$precision)/($recall+$precision);
+			#print "Relation $key: P = $precision\t-\tR = $recall \tCount: X_Y= $countR_X_Y{$key} -\tX= $countR_X{$key} -\tY = $countR_Y{$key} -\tF-mesure = $f_mesure\n";
+			$output .= "$key,$n_left,$n_right,$precision,$recall,$f_mesure\n";
+		}
+	}
+	my $precision = 0;
+	my $recall = 0;
+	my $f_mesure = 0;
+	if(($count_relation_X > 0) and ($count_relation_Y > 0))
+	{
+		$precision = $count_relation_X_Y*100/$count_relation_Y;
+		$recall = $count_relation_X_Y*100/$count_relation_X ;
+		if(($recall+$precision) ne 0)
+		{
+			$f_mesure = (2*$recall*$precision)/($recall+$precision);
+		}	
+	}
+	#print "Total of relation: P = $precision\t-\tR = $recall \tCount: X_Y= $count_relation_X_Y -\tX= $count_relation_X -\tY = $count_relation_Y -\tF-mesure = $f_mesure\n";
+	$output .= "Total,$n_left,$n_right,$precision,$recall,$f_mesure\n";
+	return $output;
+} 
 #cette function a deux arguments, primière: fichier eval.txt, deuxième: fichier output.txt
 sub EvaluationGlobal
 {

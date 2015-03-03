@@ -12,9 +12,9 @@ binmode(STDERR, ':utf8');
 binmode(STDOUT, ':utf8');
 binmode(STDIN, ':utf8');# All output will be UTF-8
 #=========================================Debut module
-sub CreateRelation
+sub CreateRelationParagraph
 {
-	#stock results
+	#stock resultats
 	my %final = ();
 	
 	my (@phrase) = @{$_[0]};
@@ -106,7 +106,7 @@ sub CreateRelation
 								$value_root1 = $1;	
 							}
 						}
-					if(length( $value_root1 || '') and (lc($value_root1) ne lc($value_root)))
+						if(length( $value_root1 || '') and (lc($value_root1) ne lc($value_root)))
 						{
 							my @sentences = split m/(?<=[.!?;])/m, $line1;
 								for(@sentences)
@@ -139,6 +139,62 @@ sub CreateRelation
 					print "The tool doesn't support create a relation that is greater than 3.\n"; 
 				}
 			}	
+		}
+	}
+	return %final;
+}
+sub CreateRelationPhrase
+{
+	my %final = ();
+	my (@phrase) = @{$_[0]};
+	my (@links) =  @{$_[1]};
+	my ($neg) =  ${$_[2]};
+	my %tags = ();
+	#prendre tous les tags pour les rélations
+	for(@links)
+	{
+		my @cut = split /[:]/,$_;
+		foreach(@cut)
+		{
+			$tags{$_}++;
+		}	
+	}
+	foreach(@phrase)
+	{
+		my $line = $_;
+		#print $line."\n";
+		for(@links)
+		{
+			my $rel = $_;
+			my @tags = split /[:]/,$rel;
+			if(scalar(@tags) eq 2)
+				{
+				
+					my $value_neg = 1;
+					if($line =~ /<$neg>(.*?)<\/$neg>/gi)
+					{
+						$value_neg = 0;
+					}
+					
+					my $reg = "<$tags[0]>(.*?)<\/$tags[0]>";
+					my %v1 = Modules::Entite::ExtractDataLocal($line,$reg);
+					$reg = "<$tags[1]>(.*?)<\/$tags[1]>";
+					my %v2 = Modules::Entite::ExtractDataLocal($line,$reg);
+					if(Modules::Utils::SizeHash(%v1) > 0 && Modules::Utils::SizeHash(%v2) > 0)
+					{
+						foreach my $v1 (keys %v1)
+						{
+							foreach my $v2 (keys %v2)
+							{
+								if(lc($v1) ne lc($v2))
+								{
+									my $str = $rel.":\$\$:".$v1.":".$v2.":".$value_neg;
+									$final{$str}++;
+								}	
+							}
+						}
+					}	
+				}
 		}
 	}
 	return %final;

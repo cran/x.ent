@@ -1,6 +1,10 @@
  What new?
 ------------------------------
-1.0.5	30-10-2014
+1.1.1 02-21-2015
+    - added a feature to extract relation using coocurrence
+    - added a new function: xtest for comparing each pair relations
+    - fixed the problem in the function xconfig 
+1.0.6	30-10-2014
     - added a new function graph proportion (xprop)
     - added new functions: xdata, xdata_value
     - updated function graph venn (xvenn)

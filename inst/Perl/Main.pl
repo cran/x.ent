@@ -254,14 +254,31 @@ foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
 	my $relation = "";#en stokant tous les rélation
 	if (exists($config->{"relation"}))
 	{
+		#check type of relation extraction
+  	my $type = $config->{"relation"}->{"type"};
 		my $root = $config->{"relation"}->{"root"};
 		my $neg = $config->{"relation"}->{"negation"};
 		my @links = @{$config->{"relation"}->{"link"}};
 		if ( length( $root || ''))
 		{
-			my @phrases = Modules::Structure::TransformerData($data,$root);
-			#Modules::Utils::PrintArray(@phrases);
-			my %final = Modules::Relation::CreateRelation(\@phrases,\$root,\@links,\$neg,\%result);
+			#if type == 1 => relation extraction with structure analyse
+			my @phrases = ();
+			my %final = ();
+			if($type == 1)
+			{
+				print "type: structure\n";
+				@phrases = Modules::Structure::TransformerData($data,$root);
+				%final = Modules::Relation::CreateRelationParagraph(\@phrases,\$root,\@links,\$neg,\%result);
+			}
+			else
+			{
+				my %root_rel = %{$result{$root}};
+				my $left = $config->{"relation"}->{"left"};
+				my $right = $config->{"relation"}->{"right"};
+				print "type: cooccurence, $left, $right \n";
+				@phrases = Modules::Structure::Direction($data,\%root_rel,\$root,\$left,\$right);
+				%final = Modules::Relation::CreateRelationPhrase(\@phrases,\@links,\$neg);	
+			}	
 			for my $key (keys %final)
 			{
 				$relation .= "$f_name:$key\n";

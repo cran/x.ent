@@ -26,7 +26,7 @@
       In this entry, we have to configure the following information:
      \tabular{rll}{
         \tab - tag: a name used to mark results, ex: p for plant, m for disease\cr
-        \tab - file: a path to dictionary file\cr
+        \tab - file: a path to a dictionary file\cr
         \tab - node: if the dictionary contains nodes (N)\cr
         \tab - col_key: the column in the dictionary that contains the original word\cr
         \tab - col_val: the columns in the dictionary that we want to use to search in the corpus\cr
@@ -55,6 +55,8 @@
       You can create the relations beetween entities, such as: the relation beetween plants and diseases.
       This is the information that you have to configure:
       \enumerate{
+            \item type: there are two options: structure (relation extraction in the following doccument structure) and cooccurrence.
+            \item left, right: these parramaters are used in the cooccurrence mode, we setup a window from the left and the right of root entity. 
             \item root: root of relation, ex: p for plant
             \item negative: an entity is used to identify whether the relation is negative or positive
             \item link: details of the relation, ex: plant:disease => p:m.

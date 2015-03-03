@@ -207,7 +207,7 @@ Rhizomanie de la Betterave:L:Rhizomanie:Rhizomanies:Rhizomanie de la Betterave:P
 Rhynchosporiose sur Dactyle:L:Rhynchosporiose:Rhynchosporioses:Rhynchosporiose sur Dactyle:R. orthosporum:Rhynchosporium orthosporum:Rhynchosporioses sur Dactyle:
 Rot brenner:L:Rot brenner:P. tracheiphila:Pseudopeziza tracheiphila:Rougeot parasitaire sur Vigne:Rougeots parasitaires sur Vigne:
 Rouille:N:Rouille:Rouilles:Rouille brune du Blé:Rouille couronnée des Graminées fourragères:Rouille de l'Ail:Rouille de l'Asperge:Rouille de la Betterave:Rouille des Paturins:Rouille du Framboisier:Rouille jaune du Blé:Rouille naine de l'Orge:Rouille noire des Graminées:Rouille à colonnettes des Ribes:
-Rouille brune du Blé:L:Rouille brune du Blé:P. recondita:Puccinia recondita:P. rubigo-vera:Puccinia rubigo-vera:Rouille brune du Ble:Rouilles brunes du Ble:Rouilles brunes du Blé:Rouille brune:Rouilles brunes:
+Rouille brune du Blé:L:Rouille brune du Blé:P. recondita:Puccinia recondita:Puccinia dispersa:P. rubigo-vera:Puccinia rubigo-vera:Rouille brune du Ble:Rouilles brunes du Ble:Rouilles brunes du Blé:Rouille brune:Rouilles brunes:
 Rouille couronnée des Graminées fourragères:L:Rouille couronnée des Graminées fourragères:P. coronata:Puccinia coronata:P. coronifera:Puccinia coronifera:Rouille couronnee des Graminées fourragères:Rouilles couronnees des Graminées fourragères:Rouilles couronnées des Graminées fourragères:Rouille couronnee:Rouilles couronnees:Rouille couronnée:Rouilles couronnées:
 Rouille de l'Ail:L:Rouille de l'Ail:P. allii:Puccinia allii:Rouilles de l'Ail:
 Rouille de l'Asperge:L:Rouille de l'Asperge:P. asparagi:Puccinia asparagi:Rouilles de l'Asperge:
@@ -227,7 +227,7 @@ Sclérotiniose sur Laitue:L:Sclérotiniose sur Laitue:S. minor:Sclerotinia minor
 Sclérotiniose sur Luzerne:L:Sclérotiniose sur Luzerne:S. trifoliorum:Sclerotinia trifoliorum:Sclerotiniose sur Luzerne:Sclerotinioses sur Luzerne:Sclérotinioses sur Luzerne:
 Sclérotiniose sur Soja:L:Sclérotiniose sur Soja:S. sclerotiorum:Sclerotinia sclerotiorum:S. libertiana:Sclerotinia libertiana:Sclerotiniose sur Soja:Sclerotinioses sur Soja:Sclérotinioses sur Soja:
 Sclérotiniose sur Tournesol:L:Sclérotiniose sur Tournesol:S. sclerotiorum:Sclerotinia sclerotiorum:S.libertiana:Sclerotinia libertiana:Sclerotiniose sur Tournesol:Sclerotinioses sur Tournesol:Sclérotinioses sur Tournesol:
-Septoriose:N:Septoriose:Septorioses:Septoriose du Blé:Septoriose du Céleri:Septoriose sur Blé:
+Septoriose:N:Septoriose:Septorioses:Septoriose du Blé:Septoriose du Céleri:Septoriose sur Blé:Septoria tritici:S. tritici
 Septoriose du Blé:L:Septoriose du Blé:L. nodorum:Leptosphaeria nodorum:M. graminicola:Mycosphaerella graminicola:Septoriose du Ble:Septorioses du Ble:Septorioses du Blé:
 Septoriose du Céleri:L:Septoriose du Céleri:S. apiicola:Septoria apiicola:Septoriose du Celeri:Septorioses du Celeri:Septorioses du Céleri:
 Sharka:N:Sharka:Sharkas:Sharka sur Abricotier:Sharka sur Pêcher et Prunier:
@@ -257,10 +257,9 @@ phoma du colza:L:phoma du colza:phomas du colza:Phoma Lingam:P. Lingam:Leptospha
 Phoma du tournesol:L:Phoma du tournesol:Phoma du tournesol:Phoma macdonaldii:P. macdonaldii:
 Wheat dwarf virus:L:Wheat dwarf virus:WDV:wheat dwarf:virus des pieds chétifs:virus des pieds chetifs:
 pourriture racinaire du pois:L:pourriture racinaire du pois:pourritures racinaire du pois:aphanomyces euteiches:a. euteiches:pourriture du pois:pourritures du pois:
-rhizoctone violet:N:rhizoctone violet:rhizoctones violet:Rhizoctone violet sur Asperge:Rhizoctone violet sur Betterave:
 jambe noire:L:jambe noire:jambes noires:pourriture molle:pourriture bactérienne:pourriture lenticellaire:
 Erwinia:N:Erwinia:Erwinias:Erwinia amylovora:Erwinia aphidicola:Erwinia billingiae:Erwinia carotovora:Erwinia cypripedii:Erwinia herbicola:Erwinia mallotivora:Erwinia milletiae:Erwinia papaya:Erwinia persicina:Erwinia psidii: Erwinia pyrifoliae:Erwinia rhapontici:Erwinia toletana:Erwinia tracheiphila:Erwinia uredovora:Erwinia chrysanthemi:
-Erwinia amylovora:L:Erwinia amylovora:Erwinias amylovoras:E. amylovora: Feu bactérien: brûlure bactérienne:
+Erwinia amylovora:L:Erwinia amylovora:Erwinias amylovoras:E. amylovora: Feu bactérien:brûlure bactérienne:
 Erwinia aphidicola:L:Erwinia aphidicola:Erwinias aphidicolas:E. aphidicola: 
 Erwinia billingiae:L:Erwinia billingiae:Erwinia billingiaes:E. billingiae:
 Erwinia carotovora:L:Erwinia carotovora:E. carotovora:Erwinias carotovoras: Erwinia carotovora subsp. atroseptica:Erwinia carotovora susp. carotovora:
@@ -278,4 +277,4 @@ Erwinia toletana:L:Erwinia toletana:Erwinias toletanas:E. toletana:
 Erwinia tracheiphila:L:Erwinia tracheiphila:Erwinia tracheiphila:E. tracheiphila:
 Erwinia uredovora:L:Erwinia uredovora:Erwinias uredovoras: E. uredovora:
 Erwinia chrysanthemi:L:Erwinia chrysanthemi:Dickeya dadantii:E. chrysanthemi:
-Dartrose:L:Dartrose:dartrose de la pomme de terre:dartroses: Point noir: Points noirs:Colletotrichum coccodes:
+Dartrose:L:Dartrose:dartrose de la pomme de terre:dartroses:Point noir:Points noirs:Colletotrichum coccodes:

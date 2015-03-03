@@ -52,13 +52,13 @@ fraisier:L:FRAISIER:F. Xananassa:Fragaria Xananassa:fraisiers:fraise:fraises:
 framboisier:N:FRAMBOISIER:framboisier rouge:framboisier noire:
 framboisier noire:L:FRAMBOISIER NOIRE:R. coreanus:Rubus coreanus:framboisiers noires:framboise noire:framboises noire:
 framboisier rouge:L:FRAMBOISIER ROUGE:r. idaeus:rubus idaeus:framboisiers rouges:framboise rouge:framboises rouges:
-graminées fourragères:N:GRAMINEES FOURRAGERES:Dactyle:Fétuque:Ray-grass:Fléole:Vulpin:Brome:houlque:
+graminées fourragères:N:graminées:GRAMINEES FOURRAGERES:Dactyle:Fétuque:Ray-grass:Fléole:Vulpin:Brome:houlque:
 groseillier:L:GROSEILLIER:R. vulgare:Ribes vulgare:groseilliers:groseille:groseilles:
 haricot:L:HARICOT:P. vulgaris:Phaseolus vulgaris:haricots:
 houblon:L:HOUBLON:H. lupulus:Humulus lupulus:houblons:
 kumquat:L:kumquat:kumquats:cumquats:cumquat:Fortunella australis:F. australis:Fortunella hindsii:F. hindsii:Fortunella japonica:F. japonica:Fortunella margarita:F. margarita:Fortunella polyandra:F. polyandra:Fortunella crassifolia:F. crassifolia:Fortunella obovata:F. obovata:kumquats:kumquat:
 laitue:L:LAITUE:L. sativa:Lactuca sativa:laitues:
-légumineuses fourragères:N:LEGUMINEUSES FOURRAGERES:Luzerne:Sainfoin:Lupin:Lotier:Trèfle:esce:
+légumineuses fourragères:N:légumineuses:LEGUMINEUSES FOURRAGERES:Luzerne:Sainfoin:Lupin:Lotier:Trèfle:esce:
 lentille:L:LENTILLE:L. culinaris:Lens culinaris:lentilles:
 lin:L:LIN:L. usitatissimum:Linum usitatissimum:lins:
 lotier:L:LOTIER:L.corniculatus:Lotus corniculatus:Corne du diable:Cornes du diable:Cornette:Cornettes:Pied de poule:Pieds de poule:Sabot de la mariée:Sabots de la mariee:Sabots de la mariée:Trefle cornu:Trefles cornus:Trèfle cornu:Trèfles cornus:

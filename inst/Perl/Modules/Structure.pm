@@ -75,21 +75,21 @@ sub AvoidPhase
 					if($data =~ m/$key(.*?)\./g)
 					{
 						$data =~ s/$key(.*?)\./\./g;
-						print "$key(.*?)\.\n"; 	
+						#print "$key(.*?)\.\n"; 	
 					}
 				}elsif($arr[$i] eq $BRACKET)
 				{
 					if($data =~ m/$key(.*?)\)/g)
 					{
 						$data =~ s/$key(.*?)\)//g;
-						print "$key(.*?)\)\n"; 	
+						#print "$key(.*?)\)\n"; 	
 					}
 				}elsif($arr[$i] eq $END)
 				{
 					if($data =~ m/$key(.*?)$fin/g)
 					{
 						$data =~ s/$key(.*?)$fin//g;
-						print "$key(.*?)$fin\n"; 	
+						#print "$key(.*?)$fin\n"; 	
 					}
 				}else
 				{
@@ -148,7 +148,7 @@ sub AvoidPhase
 						if($data =~ m/$key(.*?)($tag_fin)/g)
 						{
 							$data =~ s/$key(.*?)($tag_fin)/{S}$2/g;
-							print "$key$1$tag_fin\n";
+							#print "$key$1$tag_fin\n";
 							#last;
 						}
 					}		
@@ -309,6 +309,56 @@ sub CheckConclictTag
 	}
 	$result  =~ s/\s\s+/ /gm;
 	return $result;	
+}
+sub Direction
+{
+	my @result = ();
+	my $source = $_[0];
+	my %entity = %{$_[1]};
+	my $root = ${$_[2]};
+	my $left = ${$_[3]};
+	my $right = ${$_[4]};
+	$source =~ s/{S}//g;
+	my $offset = 0;
+	my $len = length($source);
+	#$left = 50;
+	#$right = 100;
+	foreach my $key  (keys %entity)
+	{
+		my $find = "<$root>".$key."</$root>";
+		my $pos = 0;
+		while(1)
+		{
+			$pos = index($source,$find,$pos);
+			#print "key = $find, pos = $pos\n";
+			last if($pos < 0);
+			#print $pos."\n";
+			#cut every string between current possition - left, current possition + right
+			my $pos_left = 0;
+			if($pos - $left > 0)
+			{
+				$pos_left = $pos - $left - length($key)-length($root) - 1;
+			}
+			my $cut_length = $len - $pos;#default cut to 
+			if($pos + $right < $len)
+			{
+				if($pos_left > 0)
+				{
+					$cut_length = $left + $right + length($key)*3 + length($root)+9;
+				} 
+				else
+				{
+					$cut_length = $pos +$right + length($key)*2 + length($root)+7;  	
+				}
+			}
+			my $data = substr $source, $pos_left, $cut_length;
+			#print $data."\n";
+			push @result,$data;
+			$pos++;
+		}
+	}
+
+	return @result;
 }
 sub TraitementUnitex
 {

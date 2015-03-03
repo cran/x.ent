@@ -20,12 +20,12 @@
   		//);
         var output="<table border = 0 cellspading =0>";
         output+="<tr><td width = 100px><b>Directory corpus:<font color=red>*</font></b></td><td colspan =6><input type=text id = txtCorpus size = 100 value =\""+ data.corpus.dir + "\"><font color=blue> ex: C:\\data\\corpus</font></td></tr>";
-        output+="<tr><td><b>File result:</b><font color=red>*</font></td><td colspan =6><input type=text id = txtResult size=100 value =\""+ data.result.file+ "\"><font color=blue> ex: C:\\data\\out\\output.txt</font></td></tr>";
-        output+="<tr><td><b>File evaluation:</b></td><td colspan =6><input type=text id=txtEval size=100 value =\"" + data.eval.file+ "\"><input type=checkbox id= chkFileEvaluation>I don't use this feature</td></tr>";
+        output+="<tr><td><b>Result file:</b><font color=red>*</font></td><td colspan =6><input type=text id = txtResult size=100 value =\""+ data.result.file+ "\"><font color=blue> ex: C:\\data\\out\\output.txt</font></td></tr>";
+        output+="<tr><td><b>Evaluation file:</b></td><td colspan =6><input type=text id=txtEval size=100 value =\"" + data.eval.file+ "\"><input type=checkbox id= chkFileEvaluation>I don't use this feature</td></tr>";
         output+="<tr><td></td><td><font color=red>(*)</font><i> This field is mandatory! The file or folder have a full path.</i></></td></tr>";
 
         output+="<tr><td colspan=7><hr/></td></tr><tr><td colspan=7><b>Dico</b></td></tr><tr><td colspan =7><table id= tblDico border=1 width = 100% cellspading =0 cellespacing=0>";
-        output+="<tr><td align =center>Tag result</td><td align =center>File dico</td><td align =center>Node</td><td align =center>Column key</td><td align =center>Column value</td><td align =center>Get value</td><td align =center width =50>Action</td></tr>";
+        output+="<tr><td align =center>Result tag</td><td align =center>Dico file</td><td align =center>Node</td><td align =center>Key column</td><td align =center>Value column</td><td align =center>Get value</td><td align =center width =50>Action</td></tr>";
         output+="<tr><td align=center><input type=text id = idTag></td>";
         output+="<td><input type=file id=idFile></td>";
         output+="<td align=center><select id= idNode><option value=false>false</option><option value=true>true</option></select></td>"
@@ -44,10 +44,10 @@
         }
         output+="</table></td></tr>";
         
-        output+="<tr><td colspan=7><hr/></td></tr><tr><td colspan=6><b>Unitex</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=violet><i>If you don't have Unitex, you can download </font><a href = http://www-igm.univ-mlv.fr/~unitex/index.php?page=3&html=download2.html>here</a></i></td><td width = 150><input type=checkbox id= chkUnitex>I don't use Unitex</td></tr>";
-        output+="<tr id=trUnitex1><td>Tool unitex:<font color=red>*</font></td><td colspan=6><input type=text id = txtTool size = 100 value =\""+ data.unitex.system.tool_unitex + "\"></td></tr>";
+        output+="<tr><td colspan=7><hr/></td></tr><tr><td colspan=6><b>Unitex</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color=violet><i>If you don't have Unitex tool, you can download </font><a href = http://www-igm.univ-mlv.fr/~unitex/index.php?page=3&html=download2.html>here</a></i></td><td width = 150><input type=checkbox id= chkUnitex>I don't use Unitex</td></tr>";
+        output+="<tr id=trUnitex1><td>Unitex tool:<font color=red>*</font></td><td colspan=6><input type=text id = txtTool size = 100 value =\""+ data.unitex.system.tool_unitex + "\"></td></tr>";
         output+="<tr id=trUnitex2><td>Main graph:<font color=red>*</font></td><td colspan=6><input type=text id = txtGraph size = 100 value =\""+ data.unitex.system.main_graph + "\"></td></tr>";
-        output+="<tr id=trUnitex3><td  width=180>Directory local unitex:<font color=red>*</font></td><td colspan=6><input type=text id = txtLocal size = 100 value =\""+ data.unitex.system.my_unitex + "\"></td></tr><tr id=trUnitex4><td colspan =7>";
+        output+="<tr id=trUnitex3><td  width=180>Path local Unitex:<font color=red>*</font></td><td colspan=6><input type=text id = txtLocal size = 100 value =\""+ data.unitex.system.my_unitex + "\"></td></tr><tr id=trUnitex4><td colspan =7>";
         output+="<table border =1 id = tblUnitex1><tr><td align = center colspan=2><i>Dico unitex<i></td><td align = center width = 50>Action</td></tr>";
         output+="<tr><td>Path:</td><td><input type=text id=txtDicoUnitex size=100%><font color = violet></td><td align = center width = 50><input type=button id=btnAdd2 value =Add></td></tr>";
         for (var i in data.unitex.system.dico) {
@@ -55,7 +55,7 @@
         }
         output+="</table></td></tr><tr id=trUnitex5><td colspan =7>";
         output+="<table border =1 id = tblUnitex2><tr><td align=center colspan=7><i>Mapping between tag of result with tag of unitex</i></td></tr>";
-        output+="<tr><td colspan=2 align=center>Tag result</td><td colspan=2 align=center>Tag Unitex</td><td colspan=2 align=center>Get value</td><td width=50 align=center>Action</td></tr>";
+        output+="<tr><td colspan=2 align=center>Result tag</td><td colspan=2 align=center>Unitex tag</td><td colspan=2 align=center>Get value</td><td width=50 align=center>Action</td></tr>";
         output+="<tr><td colspan=2><input type=text id= txtTagDico size=20></td><td colspan=2><input type=text id=txtTagUnitex size=20></td><td colspan=2><input type=text id=txtGetUnitex size=20></td><td width = 50 align=center><input type=button id = btnAdd3 value = Add></td></tr>";
         for (var i in data.unitex.result) {
         	output+="<tr><td colspan=2>"+data.unitex.result[i].tag+ "</td><td colspan=2>" + data.unitex.result[i].tag_unitex+ "</td><td colspan=2 align=center>"+ data.unitex.result[i].get +"</td><td width = 50><input type=button id = btnDelUnitex2 value = Delete></td></tr>";
@@ -63,15 +63,18 @@
         output+="</table></td></tr>";
       
       output+="<tr><td colspan=7><hr/></td></tr><tr><td colspan=6><b>Relation</b></td><td width=250><input type=checkbox id= chkRelation>I don't use this feature</td></tr>";
+        output+="<tr id=trType><td>Type of extraction:<font color=red>*</font></td><td colspan=6><select id=cboType><option value=1>Structure</option><option value=2>Cooccurence</option></select></td></tr>";
+        output+="<tr id=trLeft><td>Left:<font color=red>*</font></td><td><input type = text id=txtLeft value = \""+ data.relation.left+"\"></td></tr>";
+        output+="<tr id=trRight><td>Right:<font color=red>*</font></td><td><input type = text id=txtRight value = \""+ data.relation.right+"\"></td></tr>";
         output+="<tr id=trRoot><td>Root:<font color=red>*</font></td><td colspan=6><input type=text id=txtRoot size=50 value=\""+ data.relation.root+"\"></td></tr>";
         output+="<tr id=trNegation><td>Negation:<font color=red>*</font></td><td colspan=6><input type=text id=txtNegation size=50 value=\""+ data.relation.negation+"\"></td></tr>";
         output+="<tr id=trLink><td colspan=7><table border=1 id=tblRelation><tr><td align=center colspan =2><i>Relation between entities</i></td><td width=50>Action</td></tr>";
-        output+="<tr><td width=100>Relation:</td><td><input type=text id=txtRelation></td><td align=center><input type=button id = btnAdd4 value = Add></td></tr>";
+        output+="<tr><td width=100>Relation</td><td><input type=text id=txtRelation></td><td align=center><input type=button id = btnAdd4 value = Add></td></tr>";
         for (var i in data.relation.link) {
         	output+="<tr><td></td><td>" +data.relation.link[i]+"</td><td><input type=button id = btnDelRelation[] value = Delete></td></tr>";
         }
         output+="</table></td></tr>";
-        output+="<tr><td colspan=7><hr/></td></tr><tr><td><b>Avoid paragraph:</b></td><td colspan=4>&nbsp;<input type =text readonly=true id=txtAvoid value=" + data.avoid.file + ">&nbsp;<input type=file id=fileAvoid></td><td width=50><input type=button id =btnAvoid value =Add></td><td width=250><input type=checkbox id= chkAvoid>I don't use this feature</td></tr>";
+        output+="<tr><td colspan=7><hr/></td></tr><tr><td><b>Exclusion of paragraphs:</b></td><td colspan=4>&nbsp;<input type =text readonly=true id=txtAvoid value=" + data.avoid.file + ">&nbsp;<input type=file id=fileAvoid></td><td width=50><input type=button id =btnAvoid value =Add></td><td width=250><input type=checkbox id= chkAvoid>I don't use this feature</td></tr>";
         output+="<tr><td><b>Replace:</b></td><td colspan=4>&nbsp;<input type=text id=txtReplace readonly=true value=" + data.replace.file +">&nbsp;<input type=file id=fileReplace></td><td width=50><input type=button id =btnReplace value =Add></td><td width=250><input type=checkbox id= chkReplace>I don't use this feature</td></tr>";
         
         output+="<tr><td colspan=6><b>Blacklist</b></td><td><input type=checkbox id= chkBlacklist>I don't use this feature</td></tr>";
@@ -88,6 +91,7 @@
         //code the events here
         $(document).ready(function(){
           var msg_empty = "This field shouldn't be empty!";
+          var msg_number = "This field should be a numeric!";
           var msg_get_valid = "This value isn't valide, how many results do you want? 1 or 2 or all";
           var msg_col_key = "This field shouldn't be empty or this value isn't valide: should be a number of column dico!";
           var msg_col_val = "This value isn't valide, suggest a format: column begin..column end, ex 1..3 or 2,4..5 or 3..* or *";
@@ -96,7 +100,6 @@
           //update textbox Directory corpus
           $('#txtCorpus').change(function () {
            data.corpus.dir = $(this).val();
-           //alert(decodeURIComponent("C%3A%5CProgram%20files%20%5C"))
           });
           $('#txtEval').change(function () {
              data.eval.file = $(this).val();
@@ -228,7 +231,9 @@
                row.remove();
              }
            });
+          /////////////////////////////////////////////////
           //Unitex
+          ////////////////////////////////////////////////
            //update textbox Tool Unitex
            $('#txtTool').change(function () {
              data.unitex.system.tool_unitex = $(this).val();
@@ -317,7 +322,7 @@
             var row_idx = row.prevAll().length;
              if(confirm("Do you want to delete this row?"))
              {
-               delete data.unitex.result.splice(row_idx-2,1);
+               delete data.unitex.result.splice(row_idx-3,1);
                row.remove();
              }
            });
@@ -350,7 +355,39 @@
                 $('#trUnitex5').show();
               }
            });
+           //////////////////////////////////////////////
            //relation
+           //////////////////////////////////////////////
+           $("#cboType").val(data.relation.type);
+          if($('#cboType').val() == 1)
+          {
+             $('#trLeft').hide();
+             $('#trRight').hide();
+          }
+          else
+          {
+             $('#trLeft').show();
+             $('#trRight').show(); 
+          }
+          $('#cboType').change(function () {
+             if($('#cboType').val() == 1)
+              {
+                 $('#trLeft').hide();
+                 $('#trRight').hide();
+              }
+              else
+              {
+                 $('#trLeft').show();
+                 $('#trRight').show(); 
+              }
+              data.relation.type = $(this).val();
+          });
+           $('#txtLeft').change(function () {
+             data.relation.left = $(this).val();
+           });
+           $('#txtRight').change(function () {
+             data.relation.right = $(this).val();
+           });
           $('#txtRoot').change(function () {
             data.relation.root = $(this).val();
           });
@@ -566,18 +603,34 @@
            $("#idSaveAll").click(function()
            {
              //check field mandatory
-             if($.trim(data.corpus.dir) == "")
-             {
-               alert(msg_empty);
-               $('#txtCorpus').focus();
-               return;
-             }
-             if($.trim(data.result.file) == "")
-             {
-               alert(msg_empty);
-               $('#txtResult').focus();
-               return;
-             }
+              var left = $("#txtLeft");
+              if(($.trim(left.val()) == ""))
+              {
+                alert(msg_empty);
+                left.focus();
+                return;
+              }
+              if(!(/([0-9])/i).test(left.val()))
+              {
+                alert(msg_number);
+                left.val("");
+                left.focus();
+                return;
+              }
+              var right = $("#txtRight");
+              if(($.trim(right.val()) == ""))
+              {
+                alert(msg_empty);
+                right.focus();
+                return;
+              }
+              if(!(/([0-9])/i).test(right.val()))
+              {
+                alert(msg_number);
+                right.val("");
+                right.focus();
+                return;
+              }
              if ($('#chkFileEvaluation').is(":checked"))
              {
                data.eval.file = "";
@@ -619,6 +672,18 @@
              }
              else
              {
+                if(($.trim($('#txtLeft').val()) == ""))
+                {
+                  alert(msg_empty);
+                  $('#txtLeft').focus();
+                  return; 
+                }
+                if(($.trim($('#txtRight').val()) == ""))
+                {
+                  alert(msg_empty);
+                  $('#txtRight').focus();
+                  return; 
+                }
                if(($.trim($('#txtRoot').val()) == ""))
                 {
                   alert(msg_empty);
