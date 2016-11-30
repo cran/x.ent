@@ -1,9 +1,16 @@
 #this is a function main which it will call the main script
 options("encoding" = "UTF-8")
-xparse <- function()
+xparse <- function(json_path = "",verbose=FALSE)
 {
     path    = paste(.libPaths()[1], "x.ent/Perl", sep='/')
-    command = paste("perl -I \"",path, "\" \"",path, "/", "Main.pl\"", sep='')
+    if(json_path == "")
+    {
+        command = paste("perl -I \"",path, "\" \"",path, "/", "Main.pl\"", sep='')
+    }
+    else
+    {
+        command = paste("perl -I \"",path, "\" \"",path, "/", "Main.pl\""," \"",json_path,"\"", sep='')
+    }
     print(command)
     print("Please, wait ....")
     test <- try(system(command, intern=TRUE,wait=TRUE))

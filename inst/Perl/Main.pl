@@ -1,9 +1,11 @@
 ###############################################################################
 #Created: PHAN TRONG TIEN                                                     #
-#Created date: 20/03/2014  												  #
+#Created date: 20/03/2014
+#Modified date: 13/07/2014
 ###############################################################################
 use Cwd 'abs_path';
-my $dir =    abs_path($0) =~ s/Perl\/Main\.pl//r;
+my $dir =    abs_path($0);
+$dir =~ s/Perl\/Main\.pl//;
 
 use strict;
 use warnings;
@@ -12,6 +14,7 @@ use utf8;
 use autodie;
 use File::Temp qw(tempdir);
 use File::Basename;
+use File::Copy;
 use File::Path qw/make_path/;
 use open(IO => ':encoding(utf8)');
 binmode(STDERR, ':utf8');
@@ -27,10 +30,22 @@ use Modules::Evaluation;
 use Modules::Parametre;
 #lire le fichier configuration
 my $start_time = time;
+#get path of configuration file if it exists in the commandline
+my $json_path = $ARGV[0];
 my $json;
 {
     local $/; #Enable 'slurp' mode
-    open my $fh, "<", $dir."/www/config/ini.json";
+    my $fh;
+    if(not defined $json_path)
+    {
+        open $fh, "<", $dir."/www/config/ini.json";
+    }
+    else
+    {
+        open $fh, "<", $json_path;
+        #copy current configuration file to configuration file default 
+        copy $json_path,$dir."/www/config/ini.json";
+    }
     $json = <$fh>;
     close $fh;
 }
@@ -170,7 +185,7 @@ if(exists($config->{"blacklist"}))
     }
 }
 open(OUTPUT,'>:raw:encoding(UTF8)',$FILE_OUTPUT) || die "Can't open this file: $FILE_OUTPUT";
-foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
+foreach my $fp (glob($DIR_INPUT."/*.{txt,xml}"))
 {
   print "File source:\"".$fp."\"\n";
 	my $f_name = ( split m{/}, $fp )[-1];
@@ -179,6 +194,12 @@ foreach my $fp (glob("\"$DIR_INPUT\"/*.{txt,xml}"))
 	$fn =~ s/[\-\_\.]/ /g;
 
 	my $data = $fn." ". Modules::Utils::ReadFile($fp);
+    #remove xml tags
+    my ($ext) = $fp =~ /(\.[^.]+)$/;
+    if($ext eq ".xml")
+    {
+        $data =~ s|<.+?>||g;
+    }
 	#prétraitement
 	#$data = Modules::Utils::NormailezeData($data);
 	
